@@ -83,7 +83,7 @@ public:
     int64_t StartThronePayments() const { return nStartThronePayments; }
     CBaseChainParams::Network NetworkID() const { return networkID; }
     /* Return the auxpow chain ID.  */
-    inline int32_t AuxpowChainId () const { return 20; }
+    inline int32_t AuxpowChainId () const { return 0x0032; }
     /* Return start height of auxpow and the retarget interval change.  */
     virtual int AuxpowStartHeight() const = 0;
     /* Return whether or not to enforce strict chain ID checks.  */
