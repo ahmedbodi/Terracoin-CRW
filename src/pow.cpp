@@ -14,7 +14,7 @@
 
 #include <math.h>
 
-unsigned int static DarkGravityWave(const CBlockIndex* pindexLast, const Consensus::Params& params) {
+unsigned int static DarkGravityWave(const CBlockIndex* pindexLast) {
     /* current difficulty formula, dash - DarkGravity v3, written by Evan Duffield - evan@dashpay.io */
     const CBlockIndex *BlockLastSolved = pindexLast;
     const CBlockIndex *BlockReading = pindexLast;
@@ -25,8 +25,8 @@ unsigned int static DarkGravityWave(const CBlockIndex* pindexLast, const Consens
     int64_t CountBlocks = 0;
     arith_uint256 PastDifficultyAverage;
     arith_uint256 PastDifficultyAveragePrev;
-    unsigned int nProofOfWorkLimit = UintToArith256(params.powLimit).GetCompact();
-    const arith_uint256 bnPowLimit = UintToArith256(params.powLimit);
+    unsigned int nProofOfWorkLimit = Params().ProofOfWorkLimit().GetCompact();
+    const arith_uint256 bnPowLimit = Params().ProofOfWorkLimit();
 
     if (BlockLastSolved == NULL || BlockLastSolved->nHeight == 0 || BlockLastSolved->nHeight < PastBlocksMin) {
     return nProofOfWorkLimit;
@@ -54,7 +54,7 @@ unsigned int static DarkGravityWave(const CBlockIndex* pindexLast, const Consens
 
     arith_uint256 bnNew(PastDifficultyAverage);
 
-    int64_t _nTargetTimespan = CountBlocks * params.nPowTargetSpacing;
+    int64_t _nTargetTimespan = CountBlocks * Params().TargetSpacing();
 
     if (nActualTimespan < _nTargetTimespan/3)
         nActualTimespan = _nTargetTimespan/3;
@@ -71,9 +71,9 @@ unsigned int static DarkGravityWave(const CBlockIndex* pindexLast, const Consens
     return bnNew.GetCompact();
 }
 
-unsigned int GetNextWorkRequiredV2(const CBlockIndex* pindexLast, const CBlockHeader *pblock, const Consensus::Params& params)
+unsigned int GetNextWorkRequiredV2(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
 {
-    unsigned int nProofOfWorkLimit = UintToArith256(params.powLimit).GetCompact();
+    unsigned int nProofOfWorkLimit = Params().ProofOfWorkLimit().GetCompact();
 
     int64_t retargetBlockCountInterval = 2160;
     int64_t lookupBlockCount = 2160;
@@ -116,7 +116,7 @@ unsigned int GetNextWorkRequiredV2(const CBlockIndex* pindexLast, const CBlockHe
     }
 
     // Retarget
-    const arith_uint256 bnPowLimit = UintToArith256(params.powLimit);
+    const arith_uint256 bnPowLimit = Params().ProofOfWorkLimit();
     arith_uint256 bnNew;
     bnNew.SetCompact(pindexLast->nBits);
     bnNew *= nActualTimespan;
@@ -149,11 +149,11 @@ unsigned int GetNextWorkRequiredV2(const CBlockIndex* pindexLast, const CBlockHe
 
     return bnNew.GetCompact();
 }
-unsigned int GetNextWorkRequiredEMA(const CBlockIndex* pindexLast, const CBlockHeader *pblock, const Consensus::Params& params)
+unsigned int GetNextWorkRequiredEMA(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
 {
-    unsigned int nProofOfWorkLimit = UintToArith256(params.powLimit).GetCompact();
+    unsigned int nProofOfWorkLimit = Params().ProofOfWorkLimit().GetCompact();
     const int64_t perBlockTargetTimespan = 120; // two mins between blocks
-    const arith_uint256 bnPowLimit = UintToArith256(params.powLimit);
+    const arith_uint256 bnPowLimit = Params().ProofOfWorkLimit();
     int64_t block_durations[2160];
     float alpha = 0.09; // closer to 1.0 = faster response to new values
     if (pindexLast->nHeight > 110322) {
@@ -249,29 +249,29 @@ unsigned int GetNextWorkRequiredEMA(const CBlockIndex* pindexLast, const CBlockH
     return bnNew.GetCompact();
 }
 
-unsigned int GetNextWorkRequiredV1(const CBlockIndex* pindexLast, const CBlockHeader *pblock, const Consensus::Params& params)
+unsigned int GetNextWorkRequiredV1(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
 {
-    unsigned int nProofOfWorkLimit = UintToArith256(params.powLimit).GetCompact();
+    unsigned int nProofOfWorkLimit = Params().ProofOfWorkLimit().GetCompact();
 
     // Genesis block
     if (pindexLast == NULL)
         return nProofOfWorkLimit;
 
     // Only change once per difficulty adjustment interval
-    if ((pindexLast->nHeight+1) % params.DifficultyAdjustmentInterval() != 0)
+    if ((pindexLast->nHeight+1) % Params().Interval() != 0)
     {
-        if (params.fPowAllowMinDifficultyBlocks)
+        if (Params().AllowMinDifficultyBlocks())
         {
             // Special difficulty rule for testnet:
             // If the new block's timestamp is more than 2* 10 minutes
             // then allow mining of a min-difficulty block.
-            if (pblock->GetBlockTime() > pindexLast->GetBlockTime() + params.nPowTargetSpacing*2)
+            if (pblock->GetBlockTime() > pindexLast->GetBlockTime() + Params().TargetSpacing()*2)
                 return nProofOfWorkLimit;
             else
             {
                 // Return the last non-special-min-difficulty-rules-block
                 const CBlockIndex* pindex = pindexLast;
-                while (pindex->pprev && pindex->nHeight % params.DifficultyAdjustmentInterval() != 0 && pindex->nBits == nProofOfWorkLimit)
+                while (pindex->pprev && pindex->nHeight % Params().Interval() != 0 && pindex->nBits == nProofOfWorkLimit)
                     pindex = pindex->pprev;
                 return pindex->nBits;
             }
@@ -280,9 +280,9 @@ unsigned int GetNextWorkRequiredV1(const CBlockIndex* pindexLast, const CBlockHe
     }
 
     // Go back by what we want to be 1 hourworth of blocks
-    int nBlocksLookupRange = params.DifficultyAdjustmentInterval()-1;
+    int nBlocksLookupRange = Params().Interval()-1;
     if (pindexLast->nHeight > 99988) {
-    nBlocksLookupRange = params.DifficultyAdjustmentInterval()  * 24;
+    nBlocksLookupRange = Params().Interval()  * 24;
     }
     const CBlockIndex* pindexFirst = pindexLast->GetAncestor( pindexLast->nHeight - nBlocksLookupRange);
     assert(pindexFirst);
@@ -295,47 +295,47 @@ unsigned int GetNextWorkRequiredV1(const CBlockIndex* pindexLast, const CBlockHe
         nActualTimespan = nActualTimespan / 24;
     }
     LogPrintf("  nActualTimespan = %d  before bounds\n", nActualTimespan);
-    if (nActualTimespan < params.nPowTargetTimespan/4)
-        nActualTimespan = params.nPowTargetTimespan/4;
-    if (nActualTimespan > params.nPowTargetTimespan*4)
-        nActualTimespan = params.nPowTargetTimespan*4;
+    if (nActualTimespan < Params().TargetTimespan()/4)
+        nActualTimespan = Params().TargetTimespan()/4;
+    if (nActualTimespan > Params().TargetTimespan()*4)
+        nActualTimespan = Params().TargetTimespan()*4;
 
     // Retarget
-    const arith_uint256 bnPowLimit = UintToArith256(params.powLimit);
+    const arith_uint256 bnPowLimit = Params().ProofOfWorkLimit();
     arith_uint256 bnNew;
     arith_uint256 bnOld;
     bnNew.SetCompact(pindexLast->nBits);
     bnOld = bnNew;
     bnNew *= nActualTimespan;
-    bnNew /= params.nPowTargetTimespan;
+    bnNew /= Params().TargetTimespan();
 
     if (bnNew > bnPowLimit)
         bnNew = bnPowLimit;
 
     /// debug print
     LogPrintf("GetNextWorkRequired RETARGET\n");
-    LogPrintf("params.nPowTargetTimespan = %d    nActualTimespan = %d\n", params.nPowTargetTimespan, nActualTimespan);
+    LogPrintf("Params().TargetTimespan() = %d    nActualTimespan = %d\n", Params().TargetTimespan(), nActualTimespan);
     LogPrintf("Before: %08x  %s\n", pindexLast->nBits, bnOld.ToString());
     LogPrintf("After:  %08x  %s\n", bnNew.GetCompact(), bnNew.ToString());
 
     return bnNew.GetCompact();
 }
 
-unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock, const Consensus::Params& params)
+unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
 {
     if (pindexLast->nHeight <= 101631) {
-    return GetNextWorkRequiredV1(pindexLast, pblock, params);
+    return GetNextWorkRequiredV1(pindexLast, pblock);
     } else if (pindexLast->nHeight > 101631 && pindexLast->nHeight != 137161 && pindexLast->nHeight <= 181200) {
-        return GetNextWorkRequiredEMA(pindexLast, pblock, params);
+        return GetNextWorkRequiredEMA(pindexLast, pblock);
     } else if (pindexLast->nHeight == 137161) {
     return (0x1b034c51);
     } else if (pindexLast->nHeight > 181200 && pindexLast->nHeight < 833000) {
-        return GetNextWorkRequiredV2(pindexLast, pblock, params);
+        return GetNextWorkRequiredV2(pindexLast, pblock);
     } else {
-        return DarkGravityWave(pindexLast, params);
+        return DarkGravityWave(pindexLast);
     }
 
-    return GetNextWorkRequiredV2(pindexLast, pblock, params);
+    return GetNextWorkRequiredV2(pindexLast, pblock);
 
 }
 
