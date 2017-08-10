@@ -1,6 +1,6 @@
 all:
-	$(MAKE) -C .. crown_test
+	$(MAKE) -C .. terracoin_test
 clean:
-	$(MAKE) -C .. crown_test_clean
+	$(MAKE) -C .. terracoin_test_clean
 check:
-	$(MAKE) -C .. crown_test_check
+	$(MAKE) -C .. terracoin_test_check

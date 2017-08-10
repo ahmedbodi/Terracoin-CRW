@@ -1,5 +1,5 @@
 // Copyright (c) 2010 Satoshi Nakamoto
-// Copyright (c) 2009-2012 The Crowncoin developers
+// Copyright (c) 2009-2012 The Terracoincoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -21,8 +21,8 @@ Value darksend(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() == 0)
         throw runtime_error(
-            "darksend <crownaddress> <amount>\n"
-            "crownaddress, reset, or auto (AutoDenominate)"
+            "darksend <terracoinaddress> <amount>\n"
+            "terracoinaddress, reset, or auto (AutoDenominate)"
             "<amount> is a real and is rounded to the nearest 0.00000001"
             + HelpRequiringPassphrase());
 
@@ -45,14 +45,14 @@ Value darksend(const Array& params, bool fHelp)
 
     if (params.size() != 2)
         throw runtime_error(
-            "darksend <crownaddress> <amount>\n"
-            "crownaddress, denominate, or auto (AutoDenominate)"
+            "darksend <terracoinaddress> <amount>\n"
+            "terracoinaddress, denominate, or auto (AutoDenominate)"
             "<amount> is a real and is rounded to the nearest 0.00000001"
             + HelpRequiringPassphrase());
 
-    CCrowncoinAddress address(params[0].get_str());
+    CTerracoincoinAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Crown address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Terracoin address");
 
     // Amount
     int64_t nAmount = AmountFromValue(params[1]);
@@ -105,17 +105,17 @@ Value throne(const Array& params, bool fHelp)
                 "  genkey       - Generate new throneprivkey\n"
                 "  enforce      - Enforce throne payments\n"
                 "  outputs      - Print throne compatible outputs\n"
-                "  start        - Start throne configured in crown.conf\n"
+                "  start        - Start throne configured in terracoin.conf\n"
                 "  start-alias  - Start single throne by assigned alias configured in throne.conf\n"
                 "  start-many   - Start all thrones configured in throne.conf\n"
-                "  stop         - Stop throne configured in crown.conf\n"
+                "  stop         - Stop throne configured in terracoin.conf\n"
                 "  stop-alias   - Stop single throne by assigned alias configured in throne.conf\n"
                 "  stop-many    - Stop all thrones configured in throne.conf\n"
                 "  list         - Print list of all known thrones (see thronelist for more info)\n"
                 "  list-conf    - Print throne.conf in JSON format\n"
                 "  winners      - Print list of throne winners\n"
-                "  vote-many    - Vote on a Crown initiative\n"
-                "  vote         - Vote on a Crown initiative\n"
+                "  vote-many    - Vote on a Terracoin initiative\n"
+                "  vote         - Vote on a Terracoin initiative\n"
                 );
 
 
@@ -463,7 +463,7 @@ Value throne(const Array& params, bool fHelp)
             pubkey.SetDestination(winner->pubkey.GetID());
             CTxDestination address1;
             ExtractDestination(pubkey, address1);
-            CCrowncoinAddress address2(address1);
+            CTerracoincoinAddress address2(address1);
 
             obj.push_back(Pair("IP:port",       winner->addr.ToString().c_str()));
             obj.push_back(Pair("protocol",      (int64_t)winner->protocolVersion));
@@ -482,7 +482,7 @@ Value throne(const Array& params, bool fHelp)
         CKey secret;
         secret.MakeNewKey(false);
 
-        return CCrowncoinSecret(secret).ToString();
+        return CTerracoincoinSecret(secret).ToString();
     }
 
     if (strCommand == "winners")
@@ -495,7 +495,7 @@ Value throne(const Array& params, bool fHelp)
             if(thronePayments.GetBlockPayee(nHeight, payee)){
                 CTxDestination address1;
                 ExtractDestination(payee, address1);
-                CCrowncoinAddress address2(address1);
+                CTerracoincoinAddress address2(address1);
                 obj.push_back(Pair(boost::lexical_cast<std::string>(nHeight),       address2.ToString().c_str()));
             } else {
                 obj.push_back(Pair(boost::lexical_cast<std::string>(nHeight),       ""));
@@ -703,7 +703,7 @@ Value thronelist(const Array& params, bool fHelp)
                 "  rank           - Print rank of a throne based on current block\n"
                 "  status         - Print throne status: ENABLED / EXPIRED / VIN_SPENT / REMOVE / POS_ERROR (can be additionally filtered, partial match)\n"
                 "  vin            - Print vin associated with a throne (can be additionally filtered, partial match)\n"
-                "  votes          - Print all throne votes for a Crown initiative (can be additionally filtered, partial match)\n"
+                "  votes          - Print all throne votes for a Terracoin initiative (can be additionally filtered, partial match)\n"
                 );
     }
 
@@ -727,7 +727,7 @@ Value thronelist(const Array& params, bool fHelp)
                 pubkey.SetDestination(mn.pubkey.GetID());
                 CTxDestination address1;
                 ExtractDestination(pubkey, address1);
-                CCrowncoinAddress address2(address1);
+                CTerracoincoinAddress address2(address1);
 
                 std::ostringstream addrStream;
                 addrStream << setw(21) << strAddr;
@@ -757,7 +757,7 @@ Value thronelist(const Array& params, bool fHelp)
                 pubkey.SetDestination(mn.pubkey.GetID());
                 CTxDestination address1;
                 ExtractDestination(pubkey, address1);
-                CCrowncoinAddress address2(address1);
+                CTerracoincoinAddress address2(address1);
 
                 if(strFilter !="" && address2.ToString().find(strFilter) == string::npos &&
                     strAddr.find(strFilter) == string::npos) continue;

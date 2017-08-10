@@ -19,14 +19,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Crown"
-            VALUE "FileDescription",    "Crown Core (OSS GUI client for Crown)"
+            VALUE "CompanyName",        "Terracoin"
+            VALUE "FileDescription",    "Terracoin Core (OSS GUI client for Terracoin)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "crown-qt"
+            VALUE "InternalName",       "terracoin-qt"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "crown-qt.exe"
-            VALUE "ProductName",        "Crown Core"
+            VALUE "OriginalFilename",   "terracoin-qt.exe"
+            VALUE "ProductName",        "Terracoin Core"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

@@ -129,7 +129,7 @@ public:
      */
     inline bool IsLegacy() const
     {
-        return nVersion < VERSION_AUXPOW;
+        return GetBaseVersion() < 3;
     }
 
 };

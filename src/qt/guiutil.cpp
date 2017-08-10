@@ -107,7 +107,7 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent)
 #if QT_VERSION >= 0x040700
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-    widget->setPlaceholderText(QObject::tr("Enter a Crown address (e.g. %1)").arg("18WTcWvwrNnfqeQAn6th9QQ2EpnXMq5Th8"));
+    widget->setPlaceholderText(QObject::tr("Enter a Terracoin address (e.g. %1)").arg("18WTcWvwrNnfqeQAn6th9QQ2EpnXMq5Th8"));
 #endif
     widget->setValidator(new BitcoinAddressEntryValidator(parent));
     widget->setCheckValidator(new BitcoinAddressCheckValidator(parent));
@@ -124,8 +124,8 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
 
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
-    // return if URI is not valid or is no crown: URI
-    if(!uri.isValid() || uri.scheme() != QString("crown"))
+    // return if URI is not valid or is no terracoin: URI
+    if(!uri.isValid() || uri.scheme() != QString("terracoin"))
         return false;
 
     SendCoinsRecipient rv;
@@ -185,13 +185,13 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 
 bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 {
-    // Convert crown:// to crown:
+    // Convert terracoin:// to terracoin:
     //
-    //    Cannot handle this later, because crown:// will cause Qt to see the part after // as host,
+    //    Cannot handle this later, because terracoin:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("crown://", Qt::CaseInsensitive))
+    if(uri.startsWith("terracoin://", Qt::CaseInsensitive))
     {
-        uri.replace(0, 7, "crown:");
+        uri.replace(0, 7, "terracoin:");
     }
     QUrl uriInstance(uri);
     return parseBitcoinURI(uriInstance, out);
@@ -199,7 +199,7 @@ bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 
 QString formatBitcoinURI(const SendCoinsRecipient &info)
 {
-    QString ret = QString("crown:%1").arg(info.address);
+    QString ret = QString("terracoin:%1").arg(info.address);
     int paramCount = 0;
 
     if (info.amount)
@@ -392,7 +392,7 @@ void openConfigfile()
 {
     boost::filesystem::path pathConfig = GetConfigFile();
 
-    /* Open crown.conf with the associated application */
+    /* Open terracoin.conf with the associated application */
     if (boost::filesystem::exists(pathConfig))
         QDesktopServices::openUrl(QUrl::fromLocalFile(boostPathToQString(pathConfig)));
 }
@@ -590,12 +590,12 @@ TableViewLastColumnResizingFixer::TableViewLastColumnResizingFixer(QTableView* t
 #ifdef WIN32
 boost::filesystem::path static StartupShortcutPath()
 {
-    return GetSpecialFolderPath(CSIDL_STARTUP) / "Crown.lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / "Terracoin.lnk";
 }
 
 bool GetStartOnSystemStartup()
 {
-    // check for Crown.lnk
+    // check for Terracoin.lnk
     return boost::filesystem::exists(StartupShortcutPath());
 }
 
@@ -672,7 +672,7 @@ boost::filesystem::path static GetAutostartDir()
 
 boost::filesystem::path static GetAutostartFilePath()
 {
-    return GetAutostartDir() / "crown.desktop";
+    return GetAutostartDir() / "terracoin.desktop";
 }
 
 bool GetStartOnSystemStartup()
@@ -710,10 +710,10 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         boost::filesystem::ofstream optionFile(GetAutostartFilePath(), std::ios_base::out|std::ios_base::trunc);
         if (!optionFile.good())
             return false;
-        // Write a crown.desktop file to the autostart directory:
+        // Write a terracoin.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
-        optionFile << "Name=Crown\n";
+        optionFile << "Name=Terracoin\n";
         optionFile << "Exec=" << pszExePath << " -min\n";
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";
@@ -732,7 +732,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
 LSSharedFileListItemRef findStartupItemInList(LSSharedFileListRef list, CFURLRef findUrl);
 LSSharedFileListItemRef findStartupItemInList(LSSharedFileListRef list, CFURLRef findUrl)
 {
-    // loop through the list of startup items and try to find the crown app
+    // loop through the list of startup items and try to find the terracoin app
     CFArrayRef listSnapshot = LSSharedFileListCopySnapshot(list, NULL);
     for(int i = 0; i < CFArrayGetCount(listSnapshot); i++) {
         LSSharedFileListItemRef item = (LSSharedFileListItemRef)CFArrayGetValueAtIndex(listSnapshot, i);
@@ -766,7 +766,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
     LSSharedFileListItemRef foundItem = findStartupItemInList(loginItems, bitcoinAppUrl);
 
     if(fAutoStart && !foundItem) {
-        // add crown app to startup item list
+        // add terracoin app to startup item list
         LSSharedFileListInsertItemURL(loginItems, kLSSharedFileListItemBeforeFirst, NULL, NULL, bitcoinAppUrl, NULL, NULL);
     }
     else if(!fAutoStart && foundItem) {
@@ -819,7 +819,7 @@ QString loadStyleSheet()
         cssName = QString(":/css/drkblue");
         settings.setValue("theme", "drkblue");
     }*/
-    cssName = QString(":css/crown");
+    cssName = QString(":css/terracoin");
 
     QFile qFile(cssName);
     if (qFile.open(QFile::ReadOnly)) {

@@ -9,8 +9,8 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between crown-cli and crownd)
- * of a given instance of the Crown system.
+ * CBaseChainParams defines the base parameters (shared between terracoin-cli and terracoind)
+ * of a given instance of the Terracoin system.
  */
 class CBaseChainParams
 {

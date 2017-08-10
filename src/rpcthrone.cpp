@@ -34,7 +34,7 @@ void SendMoney(const CTxDestination &address, CAmount nValue, CWalletTx& wtxNew,
         throw JSONRPCError(RPC_WALLET_ERROR, strError);
     }
 
-    // Parse Crown address
+    // Parse Terracoin address
     CScript scriptPubKey = GetScriptForDestination(address);
 
     // Create and send the transaction
@@ -55,8 +55,8 @@ Value darksend(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() == 0)
         throw runtime_error(
-            "darksend <crownaddress> <amount>\n"
-            "crownaddress, reset, or auto (AutoDenominate)"
+            "darksend <terracoinaddress> <amount>\n"
+            "terracoinaddress, reset, or auto (AutoDenominate)"
             "<amount> is a real and will be rounded to the next 0.1"
             + HelpRequiringPassphrase());
 
@@ -77,14 +77,14 @@ Value darksend(const Array& params, bool fHelp)
 
     if (params.size() != 2)
         throw runtime_error(
-            "darksend <crownaddress> <amount>\n"
-            "crownaddress, denominate, or auto (AutoDenominate)"
+            "darksend <terracoinaddress> <amount>\n"
+            "terracoinaddress, denominate, or auto (AutoDenominate)"
             "<amount> is a real and will be rounded to the next 0.1"
             + HelpRequiringPassphrase());
 
     CBitcoinAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Crown address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Terracoin address");
 
     // Amount
     CAmount nAmount = AmountFromValue(params[1]);
@@ -140,7 +140,7 @@ Value throne(const Array& params, bool fHelp)
                 "  genkey       - Generate new throneprivkey\n"
                 "  enforce      - Enforce throne payments\n"
                 "  outputs      - Print throne compatible outputs\n"
-                "  start        - Start throne configured in crown.conf\n"
+                "  start        - Start throne configured in terracoin.conf\n"
                 "  start-alias  - Start single throne by assigned alias configured in throne.conf\n"
                 "  start-<mode> - Start thrones configured in throne.conf (<mode>: 'all', 'missing', 'disabled')\n"
                 "  status       - Print throne status information\n"

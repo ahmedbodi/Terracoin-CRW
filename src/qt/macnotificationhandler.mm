@@ -13,7 +13,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"io.crownpay.Crown-Qt";
+        return @"io.terracoinpay.Terracoin-Qt";
     } else {
         return [self __bundleIdentifier];
     }

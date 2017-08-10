@@ -41,7 +41,7 @@ using namespace boost;
 using namespace std;
 
 #if defined(NDEBUG)
-# error "Crown cannot be compiled without assertions."
+# error "Terracoin cannot be compiled without assertions."
 #endif
 
 /**
@@ -89,7 +89,7 @@ static void CheckBlockIndex();
 /** Constant stuff for coinbase transactions we create: */
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "Crown Signed Message:\n";
+const string strMessageMagic = "Terracoin Signed Message:\n";
 
 // Internal stuff
 namespace {
@@ -2041,7 +2041,7 @@ bool FindUndoPos(CValidationState &state, int nFile, CDiskBlockPos &pos, unsigne
 static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck() {
-    RenameThread("crown-scriptch");
+    RenameThread("terracoin-scriptch");
     scriptcheckqueue.Thread();
 }
 

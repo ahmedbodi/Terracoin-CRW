@@ -60,15 +60,15 @@ bin_PROGRAMS =
 TESTS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += crownd
+  bin_PROGRAMS += terracoind
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += crown-cli crown-tx
+  bin_PROGRAMS += terracoin-cli terracoin-tx
 endif
 
 .PHONY: FORCE
-# crown core #
+# terracoin core #
 BITCOIN_CORE_H = \
   activethrone.h \
   addrman.h \
@@ -176,7 +176,7 @@ obj/build.h: FORCE
 	  $(abs_top_srcdir)
 libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between crownd and crown-qt
+# server: shared between terracoind and terracoin-qt
 libbitcoin_server_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS)
 libbitcoin_server_a_SOURCES = \
   addrman.cpp \
@@ -208,7 +208,7 @@ libbitcoin_server_a_SOURCES = \
   $(JSON_H) \
   $(BITCOIN_CORE_H)
 
-# wallet: shared between crownd and crown-qt, but only linked
+# wallet: shared between terracoind and terracoin-qt, but only linked
 # when wallet enabled
 libbitcoin_wallet_a_CPPFLAGS = $(BITCOIN_INCLUDES)
 libbitcoin_wallet_a_SOURCES = \
@@ -257,7 +257,7 @@ univalue_libbitcoin_univalue_a_SOURCES = \
   univalue/univalue_escapes.h \
   univalue/univalue.h
 
-# common: shared between crownd, and crown-qt and non-server tools
+# common: shared between terracoind, and terracoin-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(BITCOIN_INCLUDES)
 libbitcoin_common_a_SOURCES = \
   arith_uint256.cpp \
@@ -312,7 +312,7 @@ if GLIBC_BACK_COMPAT
 libbitcoin_util_a_SOURCES += compat/glibc_compat.cpp
 endif
 
-# cli: shared between crown-cli and crown-qt
+# cli: shared between terracoin-cli and terracoin-qt
 libbitcoin_cli_a_CPPFLAGS = $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_SOURCES = \
   rpcclient.cpp \
@@ -322,7 +322,7 @@ nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # bitcoind binary #
-crownd_LDADD = \
+terracoind_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UNIVALUE) \
@@ -333,35 +333,35 @@ crownd_LDADD = \
   $(LIBSECP256K1)
 
 if ENABLE_WALLET
-crownd_LDADD += libbitcoin_wallet.a
+terracoind_LDADD += libbitcoin_wallet.a
 endif
-crownd_SOURCES = crownd.cpp
+terracoind_SOURCES = terracoind.cpp
 #
 
 if TARGET_WINDOWS
-crownd_SOURCES += crownd-res.rc
+terracoind_SOURCES += terracoind-res.rc
 endif
 
-crownd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS)
-crownd_CPPFLAGS = $(BITCOIN_INCLUDES)
-crownd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+terracoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS)
+terracoind_CPPFLAGS = $(BITCOIN_INCLUDES)
+terracoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
-# crown-cli binary #
-crown_cli_LDADD = \
+# terracoin-cli binary #
+terracoin_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBBITCOIN_UTIL) \
   $(BOOST_LIBS) \
   $(SSL_LIBS) \
   $(CRYPTO_LIBS)
 
-crown_cli_SOURCES = \
-  crown-cli.cpp
+terracoin_cli_SOURCES = \
+  terracoin-cli.cpp
 
-crown_cli_CPPFLAGS = $(BITCOIN_INCLUDES)
+terracoin_cli_CPPFLAGS = $(BITCOIN_INCLUDES)
 #
 
-# crown-tx binary #
-crown_tx_LDADD = \
+# terracoin-tx binary #
+terracoin_tx_LDADD = \
   $(LIBBITCOIN_UNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
@@ -370,15 +370,15 @@ crown_tx_LDADD = \
   $(BOOST_LIBS) \
   $(CRYPTO_LIBS)
 
-crown_tx_SOURCES = crown-tx.cpp
-crown_tx_CPPFLAGS = $(BITCOIN_INCLUDES)
+terracoin_tx_SOURCES = terracoin-tx.cpp
+terracoin_tx_CPPFLAGS = $(BITCOIN_INCLUDES)
 #
-crown_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+terracoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-crown_cli_SOURCES += crown-cli-res.rc
+terracoin_cli_SOURCES += terracoin-cli-res.rc
 endif
-crown_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+terracoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if BUILD_BITCOIN_LIBS
 include_HEADERS = script/bitcoinconsensus.h

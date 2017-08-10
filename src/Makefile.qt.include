@@ -1,25 +1,25 @@
-bin_PROGRAMS += qt/crown-qt
+bin_PROGRAMS += qt/terracoin-qt
 EXTRA_LIBRARIES += qt/libbitcoinqt.a
 
-# crown qt core #
+# terracoin qt core #
 QT_TS = \
-  qt/locale/crown_bg.ts \
-  qt/locale/crown_cs.ts \
-  qt/locale/crown_de.ts \
-  qt/locale/crown_en.ts \
-  qt/locale/crown_es.ts \
-  qt/locale/crown_fi.ts \
-  qt/locale/crown_fr.ts \
-  qt/locale/crown_it.ts \
-  qt/locale/crown_ja.ts \
-  qt/locale/crown_pl.ts \
-  qt/locale/crown_pt.ts \
-  qt/locale/crown_ru.ts \
-  qt/locale/crown_sk.ts \
-  qt/locale/crown_sv.ts \
-  qt/locale/crown_vi.ts \
-  qt/locale/crown_zh_CN.ts \
-  qt/locale/crown_zh_TW.ts
+  qt/locale/terracoin_bg.ts \
+  qt/locale/terracoin_cs.ts \
+  qt/locale/terracoin_de.ts \
+  qt/locale/terracoin_en.ts \
+  qt/locale/terracoin_es.ts \
+  qt/locale/terracoin_fi.ts \
+  qt/locale/terracoin_fr.ts \
+  qt/locale/terracoin_it.ts \
+  qt/locale/terracoin_ja.ts \
+  qt/locale/terracoin_pl.ts \
+  qt/locale/terracoin_pt.ts \
+  qt/locale/terracoin_ru.ts \
+  qt/locale/terracoin_sk.ts \
+  qt/locale/terracoin_sv.ts \
+  qt/locale/terracoin_vi.ts \
+  qt/locale/terracoin_zh_CN.ts \
+  qt/locale/terracoin_zh_TW.ts
 
 QT_FORMS_UI = \
   qt/forms/addressbookpage.ui \
@@ -93,16 +93,16 @@ BITCOIN_MM = \
   qt/macnotificationhandler.mm
 
 QT_MOC = \
-  qt/crown.moc \
+  qt/terracoin.moc \
   qt/bitcoinamountfield.moc \
   qt/intro.moc \
   qt/overviewpage.moc \
   qt/rpcconsole.moc
 
-QT_QRC_CPP = qt/qrc_crown.cpp
-QT_QRC = qt/crown.qrc
-QT_QRC_LOCALE_CPP = qt/qrc_crown_locale.cpp
-QT_QRC_LOCALE = qt/crown_locale.qrc
+QT_QRC_CPP = qt/qrc_terracoin.cpp
+QT_QRC = qt/terracoin.qrc
+QT_QRC_LOCALE_CPP = qt/qrc_terracoin_locale.cpp
+QT_QRC_LOCALE = qt/terracoin_locale.qrc
 
 PROTOBUF_CC = qt/paymentrequest.pb.cc
 PROTOBUF_H = qt/paymentrequest.pb.h
@@ -213,13 +213,13 @@ RES_ICONS = \
   qt/res/icons/tx_input.png \
   qt/res/icons/tx_output.png \
   qt/res/icons/tx_mined.png \
-  qt/res/icons/unit_crown.png \
-  qt/res/icons/unit_mcrown.png \
-  qt/res/icons/unit_ucrown.png \
+  qt/res/icons/unit_terracoin.png \
+  qt/res/icons/unit_mterracoin.png \
+  qt/res/icons/unit_uterracoin.png \
   qt/res/icons/unit_csats.png \
-  qt/res/icons/unit_tcrown.png \
-  qt/res/icons/unit_tmcrown.png \
-  qt/res/icons/unit_tucrown.png \
+  qt/res/icons/unit_tterracoin.png \
+  qt/res/icons/unit_tmterracoin.png \
+  qt/res/icons/unit_tuterracoin.png \
   qt/res/icons/unit_tcsats.png
 
 BITCOIN_QT_CPP = \
@@ -280,7 +280,7 @@ RES_IMAGES = \
   qt/res/images/about.png \
   qt/res/images/splash.png \
   qt/res/images/splash_testnet.png \
-  qt/res/images/crown_logo_horizontal.png \
+  qt/res/images/terracoin_logo_horizontal.png \
   qt/res/images/drkblue_downArrow.png \
   qt/res/images/drkblue_downArrow_small.png \
   qt/res/images/drkblue_upArrow_small.png \
@@ -291,7 +291,7 @@ RES_IMAGES = \
   qt/res/images/drkblue_walletFrame.png
 
 RES_CSS = \
-  qt/res/css/crown.css
+  qt/res/css/terracoin.css
 
 RES_CSS_IMAGES = \
   qt/res/css/down_arrow.png \
@@ -301,7 +301,7 @@ RES_CSS_IMAGES = \
 
 RES_MOVIES = $(wildcard $(srcdir)/qt/res/movies/spinner-*.png)
 
-BITCOIN_RC = qt/res/crown-qt-res.rc
+BITCOIN_RC = qt/res/terracoin-qt-res.rc
 
 BITCOIN_QT_INCLUDES = -I$(builddir)/qt -I$(srcdir)/qt -I$(srcdir)/qt/forms \
   -I$(builddir)/qt/forms
@@ -321,65 +321,65 @@ QT_FORMS_H=$(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:
 # Most files will depend on the forms and moc files as includes. Generate them
 # before anything else.
 $(QT_MOC): $(QT_FORMS_H)
-$(qt_libbitcoinqt_a_OBJECTS) $(qt_crown_qt_OBJECTS) : | $(QT_MOC)
+$(qt_libbitcoinqt_a_OBJECTS) $(qt_terracoin_qt_OBJECTS) : | $(QT_MOC)
 
 #Generating these with a half-written protobuf header leads to wacky results.
 #This makes sure it's done.
 $(QT_MOC): $(PROTOBUF_H)
 $(QT_MOC_CPP): $(PROTOBUF_H)
 
-# crown-qt binary #
-qt_crown_qt_CPPFLAGS = $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+# terracoin-qt binary #
+qt_terracoin_qt_CPPFLAGS = $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
   $(QT_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS)
 
-qt_crown_qt_SOURCES = qt/crown.cpp
+qt_terracoin_qt_SOURCES = qt/terracoin.cpp
 if TARGET_DARWIN
-  qt_crown_qt_SOURCES += $(BITCOIN_MM)
+  qt_terracoin_qt_SOURCES += $(BITCOIN_MM)
 endif
 if TARGET_WINDOWS
-  qt_crown_qt_SOURCES += $(BITCOIN_RC)
+  qt_terracoin_qt_SOURCES += $(BITCOIN_RC)
 endif
-qt_crown_qt_LDADD = qt/libbitcoinqt.a $(LIBBITCOIN_SERVER)
+qt_terracoin_qt_LDADD = qt/libbitcoinqt.a $(LIBBITCOIN_SERVER)
 if ENABLE_WALLET
-qt_crown_qt_LDADD += $(LIBBITCOIN_WALLET)
+qt_terracoin_qt_LDADD += $(LIBBITCOIN_WALLET)
 endif
-qt_crown_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(LIBBITCOIN_UNIVALUE) $(LIBLEVELDB) $(LIBMEMENV) \
+qt_terracoin_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(LIBBITCOIN_UNIVALUE) $(LIBLEVELDB) $(LIBMEMENV) \
   $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(LIBSECP256K1)
-qt_crown_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-qt_crown_qt_LIBTOOLFLAGS = --tag CXX
+qt_terracoin_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+qt_terracoin_qt_LIBTOOLFLAGS = --tag CXX
 
 #locale/foo.ts -> locale/foo.qm
 QT_QM=$(QT_TS:.ts=.qm)
 
 .SECONDARY: $(QT_QM)
 
-qt/crownstrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_wallet_a_SOURCES) $(libbitcoin_common_a_SOURCES)
+qt/terracoinstrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_wallet_a_SOURCES) $(libbitcoin_common_a_SOURCES)
 	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
 	$(AM_V_GEN) cd $(srcdir); XGETTEXT=$(XGETTEXT) ../share/qt/extract_strings_qt.py $^
 
-translate: qt/crownstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
+translate: qt/terracoinstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
 	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts qt/locale/crown_en.ts
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts qt/locale/terracoin_en.ts
 
 $(QT_QRC_LOCALE_CPP): $(QT_QRC_LOCALE) $(QT_QM)
 	@test -f $(RCC)
 	@test -f $(@D)/$(<F) || cp -f $< $(@D)
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name crown_locale $(@D)/$(<F) | \
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name terracoin_locale $(@D)/$(<F) | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
 $(QT_QRC_CPP): $(QT_QRC) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_CSS) $(RES_CSS_IMAGES) $(RES_MOVIES) $(PROTOBUF_H)
 	@test -f $(RCC)
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name crown $< | \
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name terracoin $< | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
 CLEAN_QT = $(nodist_qt_libbitcoinqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda qt/*.gcno
 
 CLEANFILES += $(CLEAN_QT)
 
-crown_qt_clean: FORCE
-	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_crown_qt_OBJECTS) qt/crown-qt$(EXEEXT) $(LIBBITCOINQT)
+terracoin_qt_clean: FORCE
+	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_terracoin_qt_OBJECTS) qt/terracoin-qt$(EXEEXT) $(LIBBITCOINQT)
 
-crown_qt : qt/crown-qt$(EXEEXT)
+terracoin_qt : qt/terracoin-qt$(EXEEXT)
 
 ui_%.h: %.ui
 	@test -f $(UIC)
