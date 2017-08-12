@@ -58,9 +58,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case CRW: return QString("CRW");
-            case mCRW: return QString("mCRW");
-            case uCRW: return QString::fromUtf8("μCRW");
+            case CRW: return QString("TRC");
+            case mCRW: return QString("mTRC");
+            case uCRW: return QString::fromUtf8("μTRC");
             case cSats: return QString("cSats");
             default: return QString("???");
         }
@@ -69,9 +69,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case CRW: return QString("tCRW");
-            case mCRW: return QString("mtCRW");
-            case uCRW: return QString::fromUtf8("μtCRW");
+            case CRW: return QString("tTRC");
+            case mCRW: return QString("mtTRC");
+            case uCRW: return QString::fromUtf8("μtTRC");
             case cSats: return QString("tcSats");
             default: return QString("???");
         }
