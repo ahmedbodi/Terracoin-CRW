@@ -169,7 +169,7 @@ public:
         pchMessageStart[2] = 0xbe;
         pchMessageStart[3] = 0x56;
         vAlertPubKey = ParseHex("04977aae0411f4e1757e8682c87ee79180ad577ef0351054e6cda5c9381fcd8c7333e88ac250d3ab3e3aafd5d1c1d946f2ca62372db7f35c84398a878aa145f09a");
-        nDefaultPort = 9340;
+        nDefaultPort = 13333;
         bnProofOfWorkLimit = ~arith_uint256(0) >> 32;  // Terracoin starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 1050000;
         nEnforceBlockUpgradeMajority = 750;
@@ -210,7 +210,7 @@ public:
         assert(hashGenesisBlock == uint256S("0x00000000804bbc6a621a9dbb564ce469f492e1ccf2d70f8a6b241e26a277afa2"));
         assert(genesis.hashMerkleRoot == uint256S("0x0f8b09f93803b067580c16c3f3a6aaa901be06ad892cea9f02d8a4f93628f196"));
 
-        vSeeds.push_back(CDNSSeedData("seed.terracoin.info", "seed.terracoin.info"));
+        vSeeds.push_back(CDNSSeedData("seed.terracoin.io", "seed.terracoin.io"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,0);                    // Terracoin addresses start with 'X'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);                    // Terracoin script addresses start with '7'
