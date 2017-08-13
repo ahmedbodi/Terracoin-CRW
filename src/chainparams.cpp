@@ -284,7 +284,7 @@ public:
         assert(hashGenesisBlock == uint256S("0x00000000d64b490e447fb522682bfa6bcb27886ed1a94d7a4856fb92ab130875"));
 
         vFixedSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("testnetseed.terracoin.io", "testnetseed.terracoin.io"))();
+        vSeeds.clear();
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);                    // Testnet terracoin addresses start with 'x' or 'y'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);                    // Testnet terracoin script addresses start with '8' or '9'
