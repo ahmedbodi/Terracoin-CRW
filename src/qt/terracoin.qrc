@@ -36,13 +36,13 @@
         <file alias="tx_input">res/icons/tx_input.png</file>
         <file alias="tx_output">res/icons/tx_output.png</file>
         <file alias="tx_inout">res/icons/tx_inout.png</file>
-        <file alias="unit_crown">res/icons/unit_crown.png</file>
-        <file alias="unit_mcrown">res/icons/unit_mcrown.png</file>
-        <file alias="unit_ucrown">res/icons/unit_ucrown.png</file>
+        <file alias="unit_terracoin">res/icons/unit_terracoin.png</file>
+        <file alias="unit_mterracoin">res/icons/unit_mterracoin.png</file>
+        <file alias="unit_uterracoin">res/icons/unit_uterracoin.png</file>
         <file alias="unit_csats">res/icons/unit_csats.png</file>
-        <file alias="unit_tcrown">res/icons/unit_tcrown.png</file>
-        <file alias="unit_tmcrown">res/icons/unit_tmcrown.png</file>
-        <file alias="unit_tucrown">res/icons/unit_tucrown.png</file>
+        <file alias="unit_tterracoin">res/icons/unit_tterracoin.png</file>
+        <file alias="unit_tmterracoin">res/icons/unit_tmterracoin.png</file>
+        <file alias="unit_tuterracoin">res/icons/unit_tuterracoin.png</file>
         <file alias="unit_tcsats">res/icons/unit_tcsats.png</file>
         <file alias="lock_closed">res/icons/lock_closed.png</file>
         <file alias="lock_open">res/icons/lock_open.png</file>
@@ -59,7 +59,7 @@
         <file alias="toolbar">res/icons/toolbar.png</file>
     </qresource>
     <qresource prefix="/css">
-        <file alias="crown">res/css/crown.css</file>
+        <file alias="terracoin">res/css/terracoin.css</file>
         <file alias="down_arrow">res/css/down_arrow.png</file>
         <file alias="upArrow_small">res/css/upArrow_small.png</file>
         <file alias="downArrow_small">res/css/downArrow_small.png</file>
@@ -67,7 +67,7 @@
     </qresource>	    
     <qresource prefix="/images">
         <file alias="about">res/images/about.png</file>
-        <file alias="crown_logo_horizontal">res/images/crown_logo_horizontal.png</file>
+        <file alias="terracoin_logo_horizontal">res/images/terracoin_logo_horizontal.png</file>
         <file alias="drkblue_downArrow">res/images/drkblue_downArrow.png</file>
         <file alias="drkblue_downArrow_small">res/images/drkblue_downArrow_small.png</file>
         <file alias="drkblue_upArrow_small">res/images/drkblue_upArrow_small.png</file>

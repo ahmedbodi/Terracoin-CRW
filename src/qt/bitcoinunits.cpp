@@ -44,9 +44,9 @@ QString BitcoinUnits::id(int unit)
 {
     switch(unit)
     {
-        case CRW: return QString("crown");
-        case mCRW: return QString("mcrown");
-        case uCRW: return QString::fromUtf8("ucrown");
+        case CRW: return QString("terracoin");
+        case mCRW: return QString("mterracoin");
+        case uCRW: return QString::fromUtf8("uterracoin");
         case cSats: return QString("csats");
         default: return QString("???");
     }
@@ -58,9 +58,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case CRW: return QString("CRW");
-            case mCRW: return QString("mCRW");
-            case uCRW: return QString::fromUtf8("μCRW");
+            case CRW: return QString("TRC");
+            case mCRW: return QString("mTRC");
+            case uCRW: return QString::fromUtf8("μTRC");
             case cSats: return QString("cSats");
             default: return QString("???");
         }
@@ -69,9 +69,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case CRW: return QString("tCRW");
-            case mCRW: return QString("mtCRW");
-            case uCRW: return QString::fromUtf8("μtCRW");
+            case CRW: return QString("tTRC");
+            case mCRW: return QString("mtTRC");
+            case uCRW: return QString::fromUtf8("μtTRC");
             case cSats: return QString("tcSats");
             default: return QString("???");
         }
@@ -84,10 +84,10 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case CRW: return QString("Crown");
-            case mCRW: return QString("Milli-Crown (1 / 1" THIN_SP_UTF8 "000)");
-            case uCRW: return QString("Micro-Crown (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-            case cSats: return QString("Ten Crown-Satoshi (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case CRW: return QString("Terracoin");
+            case mCRW: return QString("Milli-Terracoin (1 / 1" THIN_SP_UTF8 "000)");
+            case uCRW: return QString("Micro-Terracoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case cSats: return QString("Ten Terracoin-Satoshi (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
     }
@@ -95,10 +95,10 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case CRW: return QString("TestCrowns");
-            case mCRW: return QString("Milli-TestCrown (1 / 1" THIN_SP_UTF8 "000)");
-            case uCRW: return QString("Micro-TestCrown (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-            case cSats: return QString("Ten TestCrown-Satoshi (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case CRW: return QString("TestTerracoins");
+            case mCRW: return QString("Milli-TestTerracoin (1 / 1" THIN_SP_UTF8 "000)");
+            case uCRW: return QString("Micro-TestTerracoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case cSats: return QString("Ten TestTerracoin-Satoshi (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
     }

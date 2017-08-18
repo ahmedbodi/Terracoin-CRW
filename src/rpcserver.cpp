@@ -229,10 +229,10 @@ Value stop(const Array& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "stop\n"
-            "\nStop Crown server.");
+            "\nStop Terracoin server.");
     // Shutdown will take long enough that the response should get back
     StartShutdown();
-    return "Crown server stopping";
+    return "Terracoin server stopping";
 }
 
 
@@ -309,17 +309,17 @@ static const CRPCCommand vRPCCommands[] =
     { "hidden",             "reconsiderblock",        &reconsiderblock,        true,      true,       false },
     { "hidden",             "setmocktime",            &setmocktime,            true,      false,      false },
     { "hidden",             "sendalert",              &sendalert,              false,     false,      false },
-    /* Crown features */
-    { "crown",               "throne",             &throne,             true,      true,       false },
-    { "crown",               "thronelist",         &thronelist,         true,      true,       false },
-    { "crown",               "thronebroadcast",    &thronebroadcast,    true,      true,       false },
-    { "crown",               "mnbudget",               &mnbudget,               true,      true,       false },
-    { "crown",               "mnbudgetvoteraw",        &mnbudgetvoteraw,        true,      true,       false },
-    { "crown",               "mnfinalbudget",          &mnfinalbudget,          true,      true,       false },
-    { "crown",               "mnsync",                 &mnsync,                 true,      true,       false },
-    { "crown",               "spork",                  &spork,                  true,      true,       false },
+    /* Terracoin features */
+    { "terracoin",               "throne",             &throne,             true,      true,       false },
+    { "terracoin",               "thronelist",         &thronelist,         true,      true,       false },
+    { "terracoin",               "thronebroadcast",    &thronebroadcast,    true,      true,       false },
+    { "terracoin",               "mnbudget",               &mnbudget,               true,      true,       false },
+    { "terracoin",               "mnbudgetvoteraw",        &mnbudgetvoteraw,        true,      true,       false },
+    { "terracoin",               "mnfinalbudget",          &mnfinalbudget,          true,      true,       false },
+    { "terracoin",               "mnsync",                 &mnsync,                 true,      true,       false },
+    { "terracoin",               "spork",                  &spork,                  true,      true,       false },
 #ifdef ENABLE_WALLET
-    { "crown",               "darksend",               &darksend,               false,     false,      true  }, /* not threadSafe because of SendMoney */
+    { "terracoin",               "darksend",               &darksend,               false,     false,      true  }, /* not threadSafe because of SendMoney */
 
     /* Wallet */
     { "wallet",             "addmultisigaddress",     &addmultisigaddress,     true,      false,      true },
@@ -587,16 +587,16 @@ void StartRPCThreads()
         unsigned char rand_pwd[32];
         GetRandBytes(rand_pwd, 32);
         uiInterface.ThreadSafeMessageBox(strprintf(
-            _("To use crownd, or the -server option to crown-qt, you must set an rpcpassword in the configuration file:\n"
+            _("To use terracoind, or the -server option to terracoin-qt, you must set an rpcpassword in the configuration file:\n"
               "%s\n"
               "It is recommended you use the following random password:\n"
-              "rpcuser=crownrpc\n"
+              "rpcuser=terracoinrpc\n"
               "rpcpassword=%s\n"
               "(you do not need to remember this password)\n"
               "The username and password MUST NOT be the same.\n"
               "If the file does not exist, create it with owner-readable-only file permissions.\n"
               "It is also recommended to set alertnotify so you are notified of problems;\n"
-              "for example: alertnotify=echo %%s | mail -s \"Crown Alert\" admin@foo.com\n"),
+              "for example: alertnotify=echo %%s | mail -s \"Terracoin Alert\" admin@foo.com\n"),
                 GetConfigFile().string(),
                 EncodeBase58(&rand_pwd[0],&rand_pwd[0]+32)),
                 "", CClientUIInterface::MSG_ERROR | CClientUIInterface::SECURE);
@@ -1047,7 +1047,7 @@ json_spirit::Value CRPCTable::execute(const std::string &strMethod, const json_s
 }
 
 std::string HelpExampleCli(string methodname, string args){
-    return "> crown-cli " + methodname + " " + args + "\n";
+    return "> terracoin-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(string methodname, string args){

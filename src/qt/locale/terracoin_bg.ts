@@ -62,12 +62,12 @@
         <translation>Адреси за получаване</translation>
     </message>
     <message>
-        <source>These are your Crown addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Това са вашите Crown адреси за изпращане на плащания. Преди изпращане винаги проверявайте количеството и адреса за получаване на монетите.</translation>
+        <source>These are your Terracoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Това са вашите Terracoin адреси за изпращане на плащания. Преди изпращане винаги проверявайте количеството и адреса за получаване на монетите.</translation>
     </message>
     <message>
-        <source>These are your Crown addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Това са вашите Crown адреси за получаване на плащания. Препоръчително е да използвате нов адрес за всяка нова транзакция. </translation>
+        <source>These are your Terracoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Това са вашите Terracoin адреси за получаване на плащания. Препоръчително е да използвате нов адрес за всяка нова транзакция. </translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -188,8 +188,8 @@
         <translation>Портфейлът е шифриран</translation>
     </message>
     <message>
-        <source>Crown will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your crowns from being stolen by malware infecting your computer.</source>
-        <translation>Crown ще се затвори, за да завърши процеса по шифриране. Запомнете, че шифрирането на вашия портфейл не може напълно да ви предпази от кражба на монетите чрез зловреден софтуер инфектирал компютъра ви. </translation>
+        <source>Terracoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your terracoins from being stolen by malware infecting your computer.</source>
+        <translation>Terracoin ще се затвори, за да завърши процеса по шифриране. Запомнете, че шифрирането на вашия портфейл не може напълно да ви предпази от кражба на монетите чрез зловреден софтуер инфектирал компютъра ви. </translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -231,8 +231,8 @@
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <source>Crown Core</source>
-        <translation>Crown Ядро</translation>
+        <source>Terracoin Core</source>
+        <translation>Terracoin Ядро</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -255,16 +255,16 @@
         <translation>&amp;Изпращане</translation>
     </message>
     <message>
-        <source>Send coins to a Crown address</source>
-        <translation>Изпращане на монети към Crown адрес</translation>
+        <source>Send coins to a Terracoin address</source>
+        <translation>Изпращане на монети към Terracoin адрес</translation>
     </message>
     <message>
         <source>&amp;Receive</source>
         <translation>&amp;Получаване</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and crown: URIs)</source>
-        <translation>Заявка за плащане (генерира QR кодове и Crown: URI)</translation>
+        <source>Request payments (generates QR codes and terracoin: URIs)</source>
+        <translation>Заявка за плащане (генерира QR кодове и Terracoin: URI)</translation>
     </message>
     <message>
         <source>&amp;Transactions</source>
@@ -283,12 +283,12 @@
         <translation>Изход от приложението</translation>
     </message>
     <message>
-        <source>&amp;About Crown Core</source>
-        <translation>&amp;За Crown ядрото</translation>
+        <source>&amp;About Terracoin Core</source>
+        <translation>&amp;За Terracoin ядрото</translation>
     </message>
     <message>
-        <source>Show information about Crown Core</source>
-        <translation>Покаци информация за Crown Core</translation>
+        <source>Show information about Terracoin Core</source>
+        <translation>Покаци информация за Terracoin Core</translation>
     </message>
     <message>
         <source>About &amp;Qt</source>
@@ -303,8 +303,8 @@
         <translation>&amp;Опции...</translation>
     </message>
     <message>
-        <source>Modify configuration options for Crown</source>
-        <translation>Промяна на опции за конфигуриране на Crown</translation>
+        <source>Modify configuration options for Terracoin</source>
+        <translation>Промяна на опции за конфигуриране на Terracoin</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
@@ -355,16 +355,16 @@
         <translation>Подписване на &amp;съобщение...</translation>
     </message>
     <message>
-        <source>Sign messages with your Crown addresses to prove you own them</source>
-        <translation>Подпиши съобщения с твоите Crown адреси за да докажеш че ги притежаваш</translation>
+        <source>Sign messages with your Terracoin addresses to prove you own them</source>
+        <translation>Подпиши съобщения с твоите Terracoin адреси за да докажеш че ги притежаваш</translation>
     </message>
     <message>
         <source>&amp;Verify message...</source>
         <translation>&amp;Проверка на съобщение...</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Crown addresses</source>
-        <translation>Проверете съобщенията, за да сте сигурни че са подписани с определен Crown адрес</translation>
+        <source>Verify messages to ensure they were signed with specified Terracoin addresses</source>
+        <translation>Проверете съобщенията, за да сте сигурни че са подписани с определен Terracoin адрес</translation>
     </message>
     <message>
         <source>&amp;Information</source>
@@ -443,16 +443,16 @@
         <translation>Отвори &amp;URI...</translation>
     </message>
     <message>
-        <source>Open a crown: URI or payment request</source>
-        <translation>Отвори Crown: URI или заявка за плащане</translation>
+        <source>Open a terracoin: URI or payment request</source>
+        <translation>Отвори Terracoin: URI или заявка за плащане</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Опции на командния ред</translation>
     </message>
     <message>
-        <source>Crown Core client</source>
-        <translation>Crown Core клиент</translation>
+        <source>Terracoin Core client</source>
+        <translation>Terracoin Core клиент</translation>
     </message>
     <message numerus="yes">
         <source>Processed %n blocks of transaction history.</source>
@@ -463,8 +463,8 @@
         <translation>Синхронизиране на допълнителни данни: %p%</translation>
     </message>
     <message>
-        <source>Show the Crown Core help message to get a list with possible Crown command-line options</source>
-        <translation>Покажи съобщението за помощ на Crown ядрото за да получиш списък на възможните опции за командния ред</translation>
+        <source>Show the Terracoin Core help message to get a list with possible Terracoin command-line options</source>
+        <translation>Покажи съобщението за помощ на Terracoin ядрото за да получиш списък на възможните опции за командния ред</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -487,8 +487,8 @@
         <translation>Лента с инструменти</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Crown network</source>
-        <translation><numerusform>%n активни връзки към Crown мрежата</numerusform><numerusform>%n активни връзки към Crown мрежата</numerusform></translation>
+        <source>%n active connection(s) to Terracoin network</source>
+        <translation><numerusform>%n активни връзки към Terracoin мрежата</numerusform><numerusform>%n активни връзки към Terracoin мрежата</numerusform></translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -896,16 +896,16 @@ Address: %4
         <translation>Настройка на Darksend </translation>
     </message>
     <message>
-        <source>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Crown's configuration screen.</source>
-        <translation>Darksend беше успешно настроен на режим основен (%1 и 2 цикъла). Можете да промените тази настройка по всяко време, като отворите конфигурационния прозорец на Crown.</translation>
+        <source>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Terracoin's configuration screen.</source>
+        <translation>Darksend беше успешно настроен на режим основен (%1 и 2 цикъла). Можете да промените тази настройка по всяко време, като отворите конфигурационния прозорец на Terracoin.</translation>
     </message>
     <message>
-        <source>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Crown's configuration screen.</source>
-        <translation>Darksend  беше успешно настроен на режим висок (%1 и 8 цикъла). Можете да промените тази настройка по всяко време, като отворите конфигурационния прозорец на Crown.</translation>
+        <source>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Terracoin's configuration screen.</source>
+        <translation>Darksend  беше успешно настроен на режим висок (%1 и 8 цикъла). Можете да промените тази настройка по всяко време, като отворите конфигурационния прозорец на Terracoin.</translation>
     </message>
     <message>
-        <source>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Crown's configuration screen.</source>
-        <translation>Darksend беше успешно настроен на режим максимум (%1 и 16 цикъла). Можете да промените тази настройка по всяко време, като отворите конфигурационния прозорец на Crown.</translation>
+        <source>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Terracoin's configuration screen.</source>
+        <translation>Darksend беше успешно настроен на режим максимум (%1 и 16 цикъла). Можете да промените тази настройка по всяко време, като отворите конфигурационния прозорец на Terracoin.</translation>
     </message>
 </context>
 <context>
@@ -947,8 +947,8 @@ Address: %4
         <translation>Редактиране на адрес за изпращане</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Crown address.</source>
-        <translation>Въведеният адрес "%1" не е валиден Crown адрес.</translation>
+        <source>The entered address "%1" is not a valid Terracoin address.</source>
+        <translation>Въведеният адрес "%1" не е валиден Terracoin адрес.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -989,8 +989,8 @@ Address: %4
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Crown Core</source>
-        <translation>Crown ядро</translation>
+        <source>Terracoin Core</source>
+        <translation>Terracoin ядро</translation>
     </message>
     <message>
         <source>version</source>
@@ -1001,8 +1001,8 @@ Address: %4
         <translation>(%1-битов)</translation>
     </message>
     <message>
-        <source>About Crown Core</source>
-        <translation>За Crown ядрото</translation>
+        <source>About Terracoin Core</source>
+        <translation>За Terracoin ядрото</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1048,16 +1048,16 @@ Address: %4
         <translation>Добре дошли</translation>
     </message>
     <message>
-        <source>Welcome to Crown Core.</source>
-        <translation>Добре дошли в ядрото на Crown.</translation>
+        <source>Welcome to Terracoin Core.</source>
+        <translation>Добре дошли в ядрото на Terracoin.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where Crown Core will store its data.</source>
-        <translation>Тъй като програмата се стартира за първи път вие може да изберете къде Crown да съхранява своята информация.</translation>
+        <source>As this is the first time the program is launched, you can choose where Terracoin Core will store its data.</source>
+        <translation>Тъй като програмата се стартира за първи път вие може да изберете къде Terracoin да съхранява своята информация.</translation>
     </message>
     <message>
-        <source>Crown Core will download and store a copy of the Crown block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Crown ще свали и съхрани копие на Crown регистъра на блокове. Информацията ще заеме поне %1ГБ  пространство и ще нараства с времето. В тази папка ще бъде съхранен и портфейла. </translation>
+        <source>Terracoin Core will download and store a copy of the Terracoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>Terracoin ще свали и съхрани копие на Terracoin регистъра на блокове. Информацията ще заеме поне %1ГБ  пространство и ще нараства с времето. В тази папка ще бъде съхранен и портфейла. </translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1068,8 +1068,8 @@ Address: %4
         <translation>Определете папка по ваш избор:</translation>
     </message>
     <message>
-        <source>Crown Core</source>
-        <translation>Crown ядро</translation>
+        <source>Terracoin Core</source>
+        <translation>Terracoin ядро</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1122,12 +1122,12 @@ Address: %4
         <translation>&amp;Основни</translation>
     </message>
     <message>
-        <source>Automatically start Crown after logging in to the system.</source>
-        <translation>Автоматично стартиране на Crown след влизане в системата.</translation>
+        <source>Automatically start Terracoin after logging in to the system.</source>
+        <translation>Автоматично стартиране на Terracoin след влизане в системата.</translation>
     </message>
     <message>
-        <source>&amp;Start Crown on system login</source>
-        <translation>&amp;Стартирне на Crown при влизане в системата.</translation>
+        <source>&amp;Start Terracoin on system login</source>
+        <translation>&amp;Стартирне на Terracoin при влизане в системата.</translation>
     </message>
     <message>
         <source>Size of &amp;database cache</source>
@@ -1147,15 +1147,15 @@ Address: %4
     </message>
     <message>
         <source>Darksend rounds to use</source>
-        <translation>Използвани Crown цикли</translation>
+        <translation>Използвани Terracoin цикли</translation>
     </message>
     <message>
         <source>This amount acts as a threshold to turn off Darksend once it's reached.</source>
         <translation>Тази сума действа като праг, за да се изключи Darksend, когато той е достигнат.</translation>
     </message>
     <message>
-        <source>Amount of Crown to keep anonymized</source>
-        <translation>Постоянно поддържано количество анонимни Crown монети </translation>
+        <source>Amount of Terracoin to keep anonymized</source>
+        <translation>Постоянно поддържано количество анонимни Terracoin монети </translation>
     </message>
     <message>
         <source>W&amp;allet</source>
@@ -1174,8 +1174,8 @@ Address: %4
         <translation>Разрешени входящи връзки</translation>
     </message>
     <message>
-        <source>Connect to the Crown network through a SOCKS5 proxy.</source>
-        <translation>Свързване с мрежата на Crown чрез SOCKS5 прокси.</translation>
+        <source>Connect to the Terracoin network through a SOCKS5 proxy.</source>
+        <translation>Свързване с мрежата на Terracoin чрез SOCKS5 прокси.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1206,8 +1206,8 @@ Address: %4
         <translation>&amp;Мрежа</translation>
     </message>
     <message>
-        <source>Automatically open the Crown client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Автоматично отваря порта за Crown клиента в маршрутизатора. Това работи само когато вашият маршрутизатор поддържа UPnP и той е разрешен.</translation>
+        <source>Automatically open the Terracoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Автоматично отваря порта за Terracoin клиента в маршрутизатора. Това работи само когато вашият маршрутизатор поддържа UPnP и той е разрешен.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1258,14 +1258,14 @@ Address: %4
         <translation>Език на потребителски &amp;изглед :</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Crown.</source>
-        <translation>Тук можете да промените езика на потребителския изглед. Настройката ще влезе в сила след рестартиране на Crown.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Terracoin.</source>
+        <translation>Тук можете да промените езика на потребителския изглед. Настройката ще влезе в сила след рестартиране на Terracoin.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/crown/</source>
+https://www.transifex.com/projects/p/terracoin/</source>
         <translation>Липсва език или превода е непълен? Можете да помогнете с превода тук:
-https://www.transifex.com/projects/p/crown/</translation>
+https://www.transifex.com/projects/p/terracoin/</translation>
     </message>
     <message>
         <source>User Interface Theme:</source>
@@ -1347,8 +1347,8 @@ https://www.transifex.com/projects/p/crown/</translation>
         <translation>Формуляр</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Crown network after a connection is established, but this process has not completed yet.</source>
-        <translation>Показаната информация може да е остаряла. Вашият портфейл се синхронизира автоматично след изграждането на връзка с Crown мрежата, но този процес все още не е завършен.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Terracoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Показаната информация може да е остаряла. Вашият портфейл се синхронизира автоматично след изграждането на връзка с Terracoin мрежата, но този процес все още не е завършен.</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -1568,8 +1568,8 @@ https://www.transifex.com/projects/p/crown/</translation>
         <translation>Грешка в заявката за плащане</translation>
     </message>
     <message>
-        <source>Cannot start crown: click-to-pay handler</source>
-        <translation>Не може да стартира crown: кликни за плащане на притежателя</translation>
+        <source>Cannot start terracoin: click-to-pay handler</source>
+        <translation>Не може да стартира terracoin: кликни за плащане на притежателя</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1588,8 +1588,8 @@ https://www.transifex.com/projects/p/crown/</translation>
         <translation>Невалиден адрес за плащане %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Crown address or malformed URI parameters.</source>
-        <translation>Грешка при анализ на URI! Това може да е следствие от неправилен Crown адрес или неправилно зададени URI параметри.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Terracoin address or malformed URI parameters.</source>
+        <translation>Грешка при анализ на URI! Това може да е следствие от неправилен Terracoin адрес или неправилно зададени URI параметри.</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -1674,8 +1674,8 @@ https://www.transifex.com/projects/p/crown/</translation>
         <translation>Сума</translation>
     </message>
     <message>
-        <source>Enter a Crown address (e.g. %1)</source>
-        <translation>Въведете Crown адрес (напр.%1)</translation>
+        <source>Enter a Terracoin address (e.g. %1)</source>
+        <translation>Въведете Terracoin адрес (напр.%1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1764,8 +1764,8 @@ https://www.transifex.com/projects/p/crown/</translation>
         <translation>Брой връзки</translation>
     </message>
     <message>
-        <source>Open the Crown debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Отваря файла за откриване на грешки на Crown от текущата папка.  За по-големите файлове това може да отнеме няколко секунди.</translation>
+        <source>Open the Terracoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Отваря файла за откриване на грешки на Terracoin от текущата папка.  За по-големите файлове това може да отнеме няколко секунди.</translation>
     </message>
     <message>
         <source>&amp;Open</source>
@@ -1972,8 +1972,8 @@ https://www.transifex.com/projects/p/crown/</translation>
         <translation>Изход:</translation>
     </message>
     <message>
-        <source>Welcome to the Crown RPC console.</source>
-        <translation>Добре дошли в Crown RPC (Remote Procedure Call) конзолата.</translation>
+        <source>Welcome to the Terracoin RPC console.</source>
+        <translation>Добре дошли в Terracoin RPC (Remote Procedure Call) конзолата.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
@@ -2035,8 +2035,8 @@ https://www.transifex.com/projects/p/crown/</translation>
         <translation>П&amp;овторно използване на съществуващ адрес за получаване (не се препоръчва)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Crown network.</source>
-        <translation>Възможност  да се прикрепи съобщение към заявката за плащане, което да бъде показано при отваряне на заявката. Забележка: съобщението няма да бъде изпратено с плащането по мрежата на Crown.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Terracoin network.</source>
+        <translation>Възможност  да се прикрепи съобщение към заявката за плащане, което да бъде показано при отваряне на заявката. Забележка: съобщението няма да бъде изпратено с плащането по мрежата на Terracoin.</translation>
     </message>
     <message>
         <source>&amp;Message:</source>
@@ -2047,8 +2047,8 @@ https://www.transifex.com/projects/p/crown/</translation>
         <translation>Възможност да се прикрепи наименование към новия адрес за получаване.</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Crown network.</source>
-        <translation>Възможност  да се прикрепи съобщение към заявката за плащане, което да бъде показано при отваряне на заявката. &lt;br&gt;Забележка: съобщението няма да бъде изпратено с плащането по мрежата на Crown.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Terracoin network.</source>
+        <translation>Възможност  да се прикрепи съобщение към заявката за плащане, което да бъде показано при отваряне на заявката. &lt;br&gt;Забележка: съобщението няма да бъде изпратено с плащането по мрежата на Terracoin.</translation>
     </message>
     <message>
         <source>Use this form to request payments. All fields are &lt;b&gt;optional&lt;/b&gt;.</source>
@@ -2284,16 +2284,16 @@ https://www.transifex.com/projects/p/crown/</translation>
         <translation>Минимизиране</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 crowns and the transaction is only 250 bytes, then "per kilobyte" only pays 250 crowns in fee,&lt;br /&gt;while "at least" pays 1000 crowns. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Ако променената такса е 1000 crowns и транзакцията е само 250 байта, тогава "за килобайт" само плаща такса 250 crowns,,&lt;br /&gt; тогава"за последно" заплаща 1000 crowns. За транзакции по-големи от килобайт едновременно се заплащат от килобайт.</translation>
+        <source>If the custom fee is set to 1000 terracoins and the transaction is only 250 bytes, then "per kilobyte" only pays 250 terracoins in fee,&lt;br /&gt;while "at least" pays 1000 terracoins. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Ако променената такса е 1000 terracoins и транзакцията е само 250 байта, тогава "за килобайт" само плаща такса 250 terracoins,,&lt;br /&gt; тогава"за последно" заплаща 1000 terracoins. За транзакции по-големи от килобайт едновременно се заплащат от килобайт.</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 crowns and the transaction is only 250 bytes, then "per kilobyte" only pays 250 crowns in fee,&lt;br /&gt;while "total at least" pays 1000 crowns. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Ако променената такса е 1000 crowns и транзакцията е само 250 байта, тогава "за килобайт" само плаща такса 250 crowns,&lt;br /&gt; тогава"за последно" заплаща 1000 crowns. За транзакции по-големи от килобайт едновременно се заплащат от килобайт.</translation>
+        <source>If the custom fee is set to 1000 terracoins and the transaction is only 250 bytes, then "per kilobyte" only pays 250 terracoins in fee,&lt;br /&gt;while "total at least" pays 1000 terracoins. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Ако променената такса е 1000 terracoins и транзакцията е само 250 байта, тогава "за килобайт" само плаща такса 250 terracoins,&lt;br /&gt; тогава"за последно" заплаща 1000 terracoins. За транзакции по-големи от килобайт едновременно се заплащат от килобайт.</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for crown transactions than the network can process.</source>
-        <translation>Разплащането само минималната такса ще продължи толкова дълго,докато транзакцията заема по-малък обем в блоковото пространство.&lt;br /&gt; Но имайте предвид, че транзакцията може да се окаже без първоначално потвърждение ако се появи голямо търсене на crown транзакции отколкото мрежата може да обработи.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for terracoin transactions than the network can process.</source>
+        <translation>Разплащането само минималната такса ще продължи толкова дълго,докато транзакцията заема по-малък обем в блоковото пространство.&lt;br /&gt; Но имайте предвид, че транзакцията може да се окаже без първоначално потвърждение ако се появи голямо търсене на terracoin транзакции отколкото мрежата може да обработи.</translation>
     </message>
     <message>
         <source>per kilobyte</source>
@@ -2496,8 +2496,8 @@ https://www.transifex.com/projects/p/crown/</translation>
         <translation>Плати само минималната такса от %1</translation>
     </message>
     <message>
-        <source>Warning: Invalid Crown address</source>
-        <translation>Внимание: Невалиден Crown адрес</translation>
+        <source>Warning: Invalid Terracoin address</source>
+        <translation>Внимание: Невалиден Terracoin адрес</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2519,8 +2519,8 @@ https://www.transifex.com/projects/p/crown/</translation>
         <translation>Плати &amp;На:</translation>
     </message>
     <message>
-        <source>The Crown address to send the payment to</source>
-        <translation>Crown адресът да изпрати плащането към </translation>
+        <source>The Terracoin address to send the payment to</source>
+        <translation>Terracoin адресът да изпрати плащането към </translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2559,8 +2559,8 @@ https://www.transifex.com/projects/p/crown/</translation>
         <translation>Съобщение:</translation>
     </message>
     <message>
-        <source>A message that was attached to the crown: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Crown network.</source>
-        <translation>Съобщението което беше прикрепено към crown: URI ще бъде запазено с транзакцията за ваше сведение. Забележка: Това съобщение няма да бъде изпратено през Crown мрежата.</translation>
+        <source>A message that was attached to the terracoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Terracoin network.</source>
+        <translation>Съобщението което беше прикрепено към terracoin: URI ще бъде запазено с транзакцията за ваше сведение. Забележка: Това съобщение няма да бъде изпратено през Terracoin мрежата.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -2586,8 +2586,8 @@ https://www.transifex.com/projects/p/crown/</translation>
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Crown Core is shutting down...</source>
-        <translation>Crown ядрото се изключва...</translation>
+        <source>Terracoin Core is shutting down...</source>
+        <translation>Terracoin ядрото се изключва...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2609,8 +2609,8 @@ https://www.transifex.com/projects/p/crown/</translation>
         <translation>Можете да подпишете съобщение като доказателство, че притежавате определен адрес. Бъдете внимателни и не подписвайте съобщения, които биха разкрили лична информация без вашето съгласие.</translation>
     </message>
     <message>
-        <source>The Crown address to sign the message with</source>
-        <translation>Crown адресът да подпише съобщението</translation>
+        <source>The Terracoin address to sign the message with</source>
+        <translation>Terracoin адресът да подпише съобщението</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2641,8 +2641,8 @@ https://www.transifex.com/projects/p/crown/</translation>
         <translation>Копиране на текущия подпис в системния клипборд</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Crown address</source>
-        <translation>Подпиши съобщението за да докажеш че притежаваш този Crown адрес</translation>
+        <source>Sign the message to prove you own this Terracoin address</source>
+        <translation>Подпиши съобщението за да докажеш че притежаваш този Terracoin адрес</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2665,12 +2665,12 @@ https://www.transifex.com/projects/p/crown/</translation>
         <translation>Въведете подписания адрес, съобщението (уверете се, че сте копирали редовете, спациите, табовете и другите точно) и подпишете отдолу, за да удостоверите съобщението. Внимавайте да не вмъкнете излишни символи в подписа от това, което е в самото съобщение, за да избегнете риска от злонамерна външа намеса.</translation>
     </message>
     <message>
-        <source>The Crown address the message was signed with</source>
-        <translation>Crown адресът ,с който е подписано съобщението</translation>
+        <source>The Terracoin address the message was signed with</source>
+        <translation>Terracoin адресът ,с който е подписано съобщението</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Crown address</source>
-        <translation>Проверете съобщението, за да сте сигурни че е подписано с определен Crown адрес</translation>
+        <source>Verify the message to ensure it was signed with the specified Terracoin address</source>
+        <translation>Проверете съобщението, за да сте сигурни че е подписано с определен Terracoin адрес</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2736,8 +2736,8 @@ https://www.transifex.com/projects/p/crown/</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Crown Core</source>
-        <translation>Crown Ядро</translation>
+        <source>Terracoin Core</source>
+        <translation>Terracoin Ядро</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -2748,8 +2748,8 @@ https://www.transifex.com/projects/p/crown/</translation>
         <translation>Водещи Bitcoin разработчици</translation>
     </message>
     <message>
-        <source>The Crown Core developers</source>
-        <translation>Водещи Crown разработчици</translation>
+        <source>The Terracoin Core developers</source>
+        <translation>Водещи Terracoin разработчици</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -3320,14 +3320,14 @@ https://www.transifex.com/projects/p/crown/</translation>
     </message>
 </context>
 <context>
-    <name>crown-core</name>
+    <name>terracoin-core</name>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
         <translation>Свързва се с посочения адрес и винаги слуша за него. Използвайте [хост]:порт за изписване при IPv6</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. Crown Core is probably already running.</source>
-        <translation>Не може да се заключи дата директорията %s. Crown ядрото вече работи.</translation>
+        <source>Cannot obtain a lock on data directory %s. Terracoin Core is probably already running.</source>
+        <translation>Не може да се заключи дата директорията %s. Terracoin ядрото вече работи.</translation>
     </message>
     <message>
         <source>Darksend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
@@ -3378,8 +3378,8 @@ https://www.transifex.com/projects/p/crown/</translation>
         <translation>Това е предварителна тест версия - използвайте я на ваша отговорност - не използвайте за копане или за търговски приложения.</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. Crown Core is probably already running.</source>
-        <translation>Не може да се свърже с %s на този компютър. Crown ядрото най-вероятно вече работи.</translation>
+        <source>Unable to bind to %s on this computer. Terracoin Core is probably already running.</source>
+        <translation>Не може да се свърже с %s на този компютър. Terracoin ядрото най-вероятно вече работи.</translation>
     </message>
     <message>
         <source>Unable to locate enough Darksend denominated funds for this transaction.</source>
@@ -3610,8 +3610,8 @@ https://www.transifex.com/projects/p/crown/</translation>
         <translation>Изтриване на всички транзакции на портфейла и  възстановява само тези части на блок веригата чрез -rescan при стартиране</translation>
     </message>
     <message>
-        <source>Disable all Crown specific functionality (Thrones, Darksend, InstantX, Budgeting) (0-1, default: %u)</source>
-        <translation>Изключване на всички специфични Crown функции (Thrones, Darksend, InstantX, Budgeting) (0-1, по подразбиране: %u)</translation>
+        <source>Disable all Terracoin specific functionality (Thrones, Darksend, InstantX, Budgeting) (0-1, default: %u)</source>
+        <translation>Изключване на всички специфични Terracoin функции (Thrones, Darksend, InstantX, Budgeting) (0-1, по подразбиране: %u)</translation>
     </message>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file COPYING or &lt;http://www.opensource.org/licenses/mit-license.php&gt;.</source>
@@ -3706,18 +3706,18 @@ https://www.transifex.com/projects/p/crown/</translation>
         <translation>Този продукт включва софтуер, разработен от проекта OpenSSL за използване в OpenSSL Toolkit &lt;https://www.openssl.org/&gt; и криптографски софтуер, написан от Eric Young и UPnP софтуер, написан от Thomas Bernard.</translation>
     </message>
     <message>
-        <source>To use crownd, or the -server option to crown-qt, you must set an rpcpassword in the configuration file:
+        <source>To use terracoind, or the -server option to terracoin-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=crownrpc
+rpcuser=terracoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s "Crown Alert" admin@foo.com
+for example: alertnotify=echo %%s | mail -s "Terracoin Alert" admin@foo.com
 </source>
-        <translation>За използване на crownd, или the -server опция към crown-qt, трябва да зададете rpcpassword в конфигурационния файл: %s Препоръчително е да използвате следната произволна парола: rpcuser=crownrpc rpcpassword=%s (не е нужно да запомняте тази парола) Потребителя и паролата НЕ ТРЯБВА да са еднакви. Ако файла не съществува , създайте го с права за само за четене. Препоръчително е да създадете сигнал за уведомяване за да бъдете осведомени при проблем; Пример: alertnotify=echo %%s | mail -s "Crown Alert" admin@foo.com 
+        <translation>За използване на terracoind, или the -server опция към terracoin-qt, трябва да зададете rpcpassword в конфигурационния файл: %s Препоръчително е да използвате следната произволна парола: rpcuser=terracoinrpc rpcpassword=%s (не е нужно да запомняте тази парола) Потребителя и паролата НЕ ТРЯБВА да са еднакви. Ако файла не съществува , създайте го с права за само за четене. Препоръчително е да създадете сигнал за уведомяване за да бъдете осведомени при проблем; Пример: alertnotify=echo %%s | mail -s "Terracoin Alert" admin@foo.com 
 </translation>
     </message>
     <message>
@@ -3733,8 +3733,8 @@ for example: alertnotify=echo %%s | mail -s "Crown Alert" admin@foo.com
         <translation>Внимание: -maxtxfee  е с много голяма зададена стойност! Това е транзакционната такса, която ще платите ако направите единична транзакция.</translation>
     </message>
     <message>
-        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong Crown Core will not work properly.</source>
-        <translation>Внимание: Моля проверете дали датата и часът на вашият компютър са верни! Ако часовникът ви не е сверен, Crown Core няма да работи правилно.</translation>
+        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong Terracoin Core will not work properly.</source>
+        <translation>Внимание: Моля проверете дали датата и часът на вашият компютър са верни! Ако часовникът ви не е сверен, Terracoin Core няма да работи правилно.</translation>
     </message>
     <message>
         <source>Whitelist peers connecting from the given netmask or IP address. Can be specified multiple times.</source>
@@ -3783,8 +3783,8 @@ for example: alertnotify=echo %%s | mail -s "Crown Alert" admin@foo.com
         <translation>Запазени права (C) 2009-%i Bitcoin Core разработчици</translation>
     </message>
     <message>
-        <source>Copyright (C) 2014-%i The Crown Core Developers</source>
-        <translation>Запазени права (C) 2014-%i Crown Core разработчиците</translation>
+        <source>Copyright (C) 2014-%i The Terracoin Core Developers</source>
+        <translation>Запазени права (C) 2014-%i Terracoin Core разработчиците</translation>
     </message>
     <message>
         <source>Could not parse -rpcbind value %s as network address</source>
@@ -3815,8 +3815,8 @@ for example: alertnotify=echo %%s | mail -s "Crown Alert" admin@foo.com
         <translation>Грешка при свързване с Throne.</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of Crown Core</source>
-        <translation>Грешка при зареждане на wallet.dat: портфейлът изисква по-нова версия на Crown Core</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Terracoin Core</source>
+        <translation>Грешка при зареждане на wallet.dat: портфейлът изисква по-нова версия на Terracoin Core</translation>
     </message>
     <message>
         <source>Error: A fatal internal error occured, see debug.log for details</source>
@@ -3887,8 +3887,8 @@ for example: alertnotify=echo %%s | mail -s "Crown Alert" admin@foo.com
         <translation>Информация</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. Crown Core is shutting down.</source>
-        <translation>Инициализационната проверка не успешна. Crown ядрото се изключва.</translation>
+        <source>Initialization sanity check failed. Terracoin Core is shutting down.</source>
+        <translation>Инициализационната проверка не успешна. Terracoin ядрото се изключва.</translation>
     </message>
     <message>
         <source>Input is not valid.</source>
@@ -4135,8 +4135,8 @@ for example: alertnotify=echo %%s | mail -s "Crown Alert" admin@foo.com
         <translation>Използвай UPnP за определяне на порта за слушане (по подразбиране: %u)</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart Crown Core to complete</source>
-        <translation>Портфейлът трябва да бъде презаписан: рестартирайте Crown за да завършите</translation>
+        <source>Wallet needed to be rewritten: restart Terracoin Core to complete</source>
+        <translation>Портфейлът трябва да бъде презаписан: рестартирайте Terracoin за да завършите</translation>
     </message>
     <message>
         <source>Warning: Unsupported argument -benchmark ignored, use -debug=bench.</source>
@@ -4188,7 +4188,7 @@ for example: alertnotify=echo %%s | mail -s "Crown Alert" admin@foo.com
     </message>
     <message>
         <source>Keep N CRW anonymized (default: %u)</source>
-        <translation>Поддържай N Crown анонимизирани (по подразбиране: %u)</translation>
+        <translation>Поддържай N Terracoin анонимизирани (по подразбиране: %u)</translation>
     </message>
     <message>
         <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>

@@ -169,15 +169,15 @@ public:
         pchMessageStart[2] = 0xbe;
         pchMessageStart[3] = 0x56;
         vAlertPubKey = ParseHex("04977aae0411f4e1757e8682c87ee79180ad577ef0351054e6cda5c9381fcd8c7333e88ac250d3ab3e3aafd5d1c1d946f2ca62372db7f35c84398a878aa145f09a");
-        nDefaultPort = 9340;
-        bnProofOfWorkLimit = ~arith_uint256(0) >> 32;  // Crown starting difficulty is 1 / 2^12
+        nDefaultPort = 13333;
+        bnProofOfWorkLimit = ~arith_uint256(0) >> 32;  // Terracoin starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 1050000;
         nEnforceBlockUpgradeMajority = 750;
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
-        nTargetTimespan = 60 * 60; // Crown: 2 weeks
-        nTargetSpacing = 2 * 60; // Crown: 1 minutes
+        nTargetTimespan = 60 * 60; // Terracoin: 2 weeks
+        nTargetSpacing = 2 * 60; // Terracoin: 1 minutes
         nMaxTipAge = 6 * 60 * 60; 
 
         /**
@@ -210,14 +210,14 @@ public:
         assert(hashGenesisBlock == uint256S("0x00000000804bbc6a621a9dbb564ce469f492e1ccf2d70f8a6b241e26a277afa2"));
         assert(genesis.hashMerkleRoot == uint256S("0x0f8b09f93803b067580c16c3f3a6aaa901be06ad892cea9f02d8a4f93628f196"));
 
-        vSeeds.push_back(CDNSSeedData("seed.terracoin.info", "seed.terracoin.info"));
+        vSeeds.push_back(CDNSSeedData("seed.terracoin.io", "seed.terracoin.io"));
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,0);                    // Crown addresses start with 'X'
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);                    // Crown script addresses start with '7'
-        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,128);                    // Crown private keys start with '7' or 'X'
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,0);                    // Terracoin addresses start with 'X'
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);                    // Terracoin script addresses start with '7'
+        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,128);                    // Terracoin private keys start with '7' or 'X'
         base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
-        base58Prefixes[EXT_COIN_TYPE]  = list_of(0x80000005).convert_to_container<std::vector<unsigned char> >();             // Crown BIP44 coin type is '5'
+        base58Prefixes[EXT_COIN_TYPE]  = list_of(0x80000005).convert_to_container<std::vector<unsigned char> >();             // Terracoin BIP44 coin type is '5'
 
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
@@ -257,75 +257,40 @@ public:
 static CMainParams mainParams;
 
 /**
- * Testnet (v3)
+ * Testnet (v4)
  */
 class CTestNetParams : public CMainParams {
 public:
     CTestNetParams() {
         networkID = CBaseChainParams::TESTNET;
         strNetworkID = "test";
-        pchMessageStart[0] = 0x0c;
-        pchMessageStart[1] = 0x17;
-        pchMessageStart[2] = 0x0f;
-        pchMessageStart[3] = 0x05;
+        pchMessageStart[0] = 0x41;
+        pchMessageStart[1] = 0xba;
+        pchMessageStart[2] = 0xbe;
+		pchMessageStart[3] = 0x56;
         vAlertPubKey = ParseHex("04517d8a699cb43d3938d7b24faaff7cda448ca4ea267723ba614784de661949bf632d6304316b244646dea079735b9a6fc4af804efb4752075b9fe2245e14e412");
-        nDefaultPort = 19340;
+        nDefaultPort = 23333;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
         nMinerThreads = 0;
-        nTargetTimespan = 14 * 24 * 60 * 60; // Crown: 1 day
-        nTargetSpacing = 1 * 60; // Crown: 2.5 minutes
         nMaxTipAge = 0x7fffffff;
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1483492562;
-        genesis.nNonce = 2574547475;
-
-	/*if (true && genesis.GetHash() != hashGenesisBlock)
-                       {
-                           printf("Searching for genesis block...\n");
-                           uint256 hashTarget = uint256().SetCompact(genesis.nBits);
-                           uint256 thash;
-                           while (true)
-                           {
-                               thash = genesis.GetHash();
-                               if (thash <= hashTarget)
-                                 break;
-                               if ((genesis.nNonce & 0xFFF) == 0)
-                               {
-                                   printf("nonce %08X: hash = %s (target = %s)\n", genesis.nNonce, thash.ToString().c_str(), hashTarget.ToString().c_str());
-                               }
-                               ++genesis.nNonce;
-                               if (genesis.nNonce == 0)
-                               {
-                                   printf("NONCE WRAPPED, incrementing time\n");
-                                   ++genesis.nTime;
-                               }
-                           }
-                           printf("genesis.nTime = %u \n", genesis.nTime);
-                           printf("genesis.nNonce = %u \n", genesis.nNonce);
-                           printf("genesis.nVersion = %u \n", genesis.nVersion);
-                           //printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str()); //first this, then comment this line out and uncomment the one under.
-                           printf("genesis.hashMerkleRoot = %s \n", genesis.hashMerkleRoot.ToString().c_str()); //improvised. worked for me, to find merkle root/
-                       }*/
+        genesis.nTime = 1354965534;
+        genesis.nNonce = 1178774204;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256S("0x000000004daeaebf6182d09b7b40b81bc72caab1a13c79cef2669b0b5686b7b8"));
-        assert(genesis.hashMerkleRoot == uint256S("0x80ad356118a9ab8db192db66ef77146cc36d958f959251feace550e4ca3d1446"));
+        assert(hashGenesisBlock == uint256S("0x00000000d64b490e447fb522682bfa6bcb27886ed1a94d7a4856fb92ab130875"));
 
-        vFixedSeeds.clear();
-        vSeeds.clear();
+   	vSeeds.push_back(CDNSSeedData("testnetseed", "testnetseed.terracoin.io"));
 
-        vSeeds.push_back(CDNSSeedData("crown.tech", "testnet-seed.crown.tech"));
-        vSeeds.push_back(CDNSSeedData("infernopool.com", "crwtestnet.infernopool.com"));
-
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);                    // Testnet crown addresses start with 'x' or 'y'
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);                    // Testnet crown script addresses start with '8' or '9'
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);                    // Testnet terracoin addresses start with 'x' or 'y'
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);                    // Testnet terracoin script addresses start with '8' or '9'
         base58Prefixes[SECRET_KEY]     = std::vector<unsigned char>(1,239);                    // Testnet private keys start with '9' or 'c' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x35)(0x83)(0x94).convert_to_container<std::vector<unsigned char> >();
-        base58Prefixes[EXT_COIN_TYPE]  = list_of(0x80000001).convert_to_container<std::vector<unsigned char> >();             // Testnet crown BIP44 coin type is '5' (All coin's testnet default)
+        base58Prefixes[EXT_COIN_TYPE]  = list_of(0x80000001).convert_to_container<std::vector<unsigned char> >();             // Testnet terracoin BIP44 coin type is '5' (All coin's testnet default)
 
         convertSeed6(vFixedSeeds, pnSeed6_test, ARRAYLEN(pnSeed6_test));
 
@@ -380,8 +345,8 @@ public:
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 1;
-        nTargetTimespan = 14 * 24 * 60 * 60; // Crown: 2 weeks
-        nTargetSpacing = 1 * 60; // Crown: 1 minutes
+        nTargetTimespan = 14 * 24 * 60 * 60; // Terracoin: 2 weeks
+        nTargetSpacing = 1 * 60; // Terracoin: 1 minutes
         bnProofOfWorkLimit = ~arith_uint256(0) >> 1;
         nMaxTipAge = 6 * 60 * 60;
         genesis.nTime = 1296688602;
@@ -389,7 +354,7 @@ public:
         genesis.nNonce = 1;
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 19445;
-        assert(hashGenesisBlock == uint256S("0x231de73ec08234a4adff3c71e57271a13fa73f5ae1ca6b0ded89275e557a6207"));
+        //assert(hashGenesisBlock == uint256S("0x231de73ec08234a4adff3c71e57271a13fa73f5ae1ca6b0ded89275e557a6207"));
 
         vFixedSeeds.clear(); //! Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();  //! Regtest mode doesn't have any DNS seeds.

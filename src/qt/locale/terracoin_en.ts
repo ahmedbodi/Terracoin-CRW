@@ -78,13 +78,13 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your Crown addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>These are your Crown addresses for sending payments. Always check the amount and the receiving address before sending coins.</translation>
+        <source>These are your Terracoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>These are your Terracoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your Crown addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>These are your Crown addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</translation>
+        <source>These are your Terracoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>These are your Terracoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -235,8 +235,8 @@
     </message>
     <message>
         <location line="-57"/>
-        <source>Crown will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your crowns from being stolen by malware infecting your computer.</source>
-        <translation>Crown will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your crowns from being stolen by malware infecting your computer.</translation>
+        <source>Terracoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your terracoins from being stolen by malware infecting your computer.</source>
+        <translation>Terracoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your terracoins from being stolen by malware infecting your computer.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -296,8 +296,8 @@
     <message>
         <location filename="../bitcoingui.cpp" line="+108"/>
         <location line="+752"/>
-        <source>Crown Core</source>
-        <translation>Crown Core</translation>
+        <source>Terracoin Core</source>
+        <translation>Terracoin Core</translation>
     </message>
     <message>
         <location line="-743"/>
@@ -326,8 +326,8 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Send coins to a Crown address</source>
-        <translation>Send coins to a Crown address</translation>
+        <source>Send coins to a Terracoin address</source>
+        <translation>Send coins to a Terracoin address</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -336,8 +336,8 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Request payments (generates QR codes and crown: URIs)</source>
-        <translation>Request payments (generates QR codes and crown: URIs)</translation>
+        <source>Request payments (generates QR codes and terracoin: URIs)</source>
+        <translation>Request payments (generates QR codes and terracoin: URIs)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -361,13 +361,13 @@
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;About Crown Core</source>
-        <translation>&amp;About Crown Core</translation>
+        <source>&amp;About Terracoin Core</source>
+        <translation>&amp;About Terracoin Core</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Show information about Crown Core</source>
-        <translation>Show information about Crown Core</translation>
+        <source>Show information about Terracoin Core</source>
+        <translation>Show information about Terracoin Core</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -387,8 +387,8 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Modify configuration options for Crown</source>
-        <translation>Modify configuration options for Crown</translation>
+        <source>Modify configuration options for Terracoin</source>
+        <translation>Modify configuration options for Terracoin</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -452,8 +452,8 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Sign messages with your Crown addresses to prove you own them</source>
-        <translation>Sign messages with your Crown addresses to prove you own them</translation>
+        <source>Sign messages with your Terracoin addresses to prove you own them</source>
+        <translation>Sign messages with your Terracoin addresses to prove you own them</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -462,8 +462,8 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Verify messages to ensure they were signed with specified Crown addresses</source>
-        <translation>Verify messages to ensure they were signed with specified Crown addresses</translation>
+        <source>Verify messages to ensure they were signed with specified Terracoin addresses</source>
+        <translation>Verify messages to ensure they were signed with specified Terracoin addresses</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -562,8 +562,8 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Open a crown: URI or payment request</source>
-        <translation>Open a crown: URI or payment request</translation>
+        <source>Open a terracoin: URI or payment request</source>
+        <translation>Open a terracoin: URI or payment request</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -572,8 +572,8 @@
     </message>
     <message>
         <location line="+196"/>
-        <source>Crown Core client</source>
-        <translation>Crown Core client</translation>
+        <source>Terracoin Core client</source>
+        <translation>Terracoin Core client</translation>
     </message>
     <message numerus="yes">
         <location line="+182"/>
@@ -587,8 +587,8 @@
     </message>
     <message>
         <location line="-407"/>
-        <source>Show the Crown Core help message to get a list with possible Crown command-line options</source>
-        <translation>Show the Crown Core help message to get a list with possible Crown command-line options</translation>
+        <source>Show the Terracoin Core help message to get a list with possible Terracoin command-line options</source>
+        <translation>Show the Terracoin Core help message to get a list with possible Terracoin command-line options</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -617,8 +617,8 @@
     </message>
     <message numerus="yes">
         <location line="+256"/>
-        <source>%n active connection(s) to Crown network</source>
-        <translation><numerusform>%n active connection to Crown network</numerusform><numerusform>%n active connections to Crown network</numerusform></translation>
+        <source>%n active connection(s) to Terracoin network</source>
+        <translation><numerusform>%n active connection to Terracoin network</numerusform><numerusform>%n active connections to Terracoin network</numerusform></translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1132,18 +1132,18 @@ Address: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Crown&apos;s configuration screen.</source>
-        <translation>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Crown&apos;s configuration screen.</translation>
+        <source>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Terracoin&apos;s configuration screen.</source>
+        <translation>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Terracoin&apos;s configuration screen.</translation>
     </message>
     <message>
         <location line="+15"/>
-        <source>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Crown&apos;s configuration screen.</source>
-        <translation>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Crown&apos;s configuration screen.</translation>
+        <source>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Terracoin&apos;s configuration screen.</source>
+        <translation>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Terracoin&apos;s configuration screen.</translation>
     </message>
     <message>
         <location line="+15"/>
-        <source>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Crown&apos;s configuration screen.</source>
-        <translation>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Crown&apos;s configuration screen.</translation>
+        <source>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Terracoin&apos;s configuration screen.</source>
+        <translation>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Terracoin&apos;s configuration screen.</translation>
     </message>
 </context>
 <context>
@@ -1195,8 +1195,8 @@ Address: %4
     </message>
     <message>
         <location line="+71"/>
-        <source>The entered address &quot;%1&quot; is not a valid Crown address.</source>
-        <translation>The entered address &quot;%1&quot; is not a valid Crown address.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Terracoin address.</source>
+        <translation>The entered address &quot;%1&quot; is not a valid Terracoin address.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1246,8 +1246,8 @@ Address: %4
     <name>HelpMessageDialog</name>
     <message>
         <location filename="../utilitydialog.cpp" line="+32"/>
-        <source>Crown Core</source>
-        <translation>Crown Core</translation>
+        <source>Terracoin Core</source>
+        <translation>Terracoin Core</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1262,8 +1262,8 @@ Address: %4
     </message>
     <message>
         <location line="+5"/>
-        <source>About Crown Core</source>
-        <translation>About Crown Core</translation>
+        <source>About Terracoin Core</source>
+        <translation>About Terracoin Core</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -1320,18 +1320,18 @@ Address: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Welcome to Crown Core.</source>
-        <translation>Welcome to Crown Core.</translation>
+        <source>Welcome to Terracoin Core.</source>
+        <translation>Welcome to Terracoin Core.</translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>As this is the first time the program is launched, you can choose where Crown Core will store its data.</source>
-        <translation>As this is the first time the program is launched, you can choose where Crown Core will store its data.</translation>
+        <source>As this is the first time the program is launched, you can choose where Terracoin Core will store its data.</source>
+        <translation>As this is the first time the program is launched, you can choose where Terracoin Core will store its data.</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>Crown Core will download and store a copy of the Crown block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Crown Core will download and store a copy of the Crown block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</translation>
+        <source>Terracoin Core will download and store a copy of the Terracoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>Terracoin Core will download and store a copy of the Terracoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1345,8 +1345,8 @@ Address: %4
     </message>
     <message>
         <location filename="../intro.cpp" line="+82"/>
-        <source>Crown Core</source>
-        <translation>Crown Core</translation>
+        <source>Terracoin Core</source>
+        <translation>Terracoin Core</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1411,13 +1411,13 @@ Address: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically start Crown after logging in to the system.</source>
-        <translation>Automatically start Crown after logging in to the system.</translation>
+        <source>Automatically start Terracoin after logging in to the system.</source>
+        <translation>Automatically start Terracoin after logging in to the system.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Crown on system login</source>
-        <translation>&amp;Start Crown on system login</translation>
+        <source>&amp;Start Terracoin on system login</source>
+        <translation>&amp;Start Terracoin on system login</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1451,8 +1451,8 @@ Address: %4
     </message>
     <message>
         <location line="+15"/>
-        <source>Amount of Crown to keep anonymized</source>
-        <translation>Amount of Crown to keep anonymized</translation>
+        <source>Amount of Terracoin to keep anonymized</source>
+        <translation>Amount of Terracoin to keep anonymized</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -1476,8 +1476,8 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Crown network through a SOCKS5 proxy.</source>
-        <translation>Connect to the Crown network through a SOCKS5 proxy.</translation>
+        <source>Connect to the Terracoin network through a SOCKS5 proxy.</source>
+        <translation>Connect to the Terracoin network through a SOCKS5 proxy.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1516,8 +1516,8 @@ Address: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Crown client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatically open the Crown client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+        <source>Automatically open the Terracoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatically open the Terracoin client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1581,15 +1581,15 @@ Address: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Crown.</source>
-        <translation>The user interface language can be set here. This setting will take effect after restarting Crown.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Terracoin.</source>
+        <translation>The user interface language can be set here. This setting will take effect after restarting Terracoin.</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/crown/</source>
+https://www.transifex.com/projects/p/terracoin/</source>
         <translation>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/crown/</translation>
+https://www.transifex.com/projects/p/terracoin/</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -1695,8 +1695,8 @@ https://www.transifex.com/projects/p/crown/</translation>
         <location line="+53"/>
         <location line="+1015"/>
         <location line="+77"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Crown network after a connection is established, but this process has not completed yet.</source>
-        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the Crown network after a connection is established, but this process has not completed yet.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Terracoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the Terracoin network after a connection is established, but this process has not completed yet.</translation>
     </message>
     <message>
         <location line="-843"/>
@@ -1990,8 +1990,8 @@ https://www.transifex.com/projects/p/crown/</translation>
     </message>
     <message>
         <location line="-400"/>
-        <source>Cannot start crown: click-to-pay handler</source>
-        <translation>Cannot start crown: click-to-pay handler</translation>
+        <source>Cannot start terracoin: click-to-pay handler</source>
+        <translation>Cannot start terracoin: click-to-pay handler</translation>
     </message>
     <message>
         <location line="+104"/>
@@ -2017,8 +2017,8 @@ https://www.transifex.com/projects/p/crown/</translation>
     </message>
     <message>
         <location line="+8"/>
-        <source>URI cannot be parsed! This can be caused by an invalid Crown address or malformed URI parameters.</source>
-        <translation>URI cannot be parsed! This can be caused by an invalid Crown address or malformed URI parameters.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Terracoin address or malformed URI parameters.</source>
+        <translation>URI cannot be parsed! This can be caused by an invalid Terracoin address or malformed URI parameters.</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -2125,8 +2125,8 @@ https://www.transifex.com/projects/p/crown/</translation>
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+110"/>
-        <source>Enter a Crown address (e.g. %1)</source>
-        <translation>Enter a Crown address (e.g. %1)</translation>
+        <source>Enter a Terracoin address (e.g. %1)</source>
+        <translation>Enter a Terracoin address (e.g. %1)</translation>
     </message>
     <message>
         <location line="+760"/>
@@ -2259,8 +2259,8 @@ https://www.transifex.com/projects/p/crown/</translation>
     </message>
     <message>
         <location line="+76"/>
-        <source>Open the Crown debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Open the Crown debug log file from the current data directory. This can take a few seconds for large log files.</translation>
+        <source>Open the Terracoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Open the Terracoin debug log file from the current data directory. This can take a few seconds for large log files.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2521,8 +2521,8 @@ https://www.transifex.com/projects/p/crown/</translation>
     </message>
     <message>
         <location line="-35"/>
-        <source>Welcome to the Crown RPC console.</source>
-        <translation>Welcome to the Crown RPC console.</translation>
+        <source>Welcome to the Terracoin RPC console.</source>
+        <translation>Welcome to the Terracoin RPC console.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2601,8 +2601,8 @@ https://www.transifex.com/projects/p/crown/</translation>
     </message>
     <message>
         <location line="+14"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Crown network.</source>
-        <translation>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Crown network.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Terracoin network.</source>
+        <translation>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Terracoin network.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2617,8 +2617,8 @@ https://www.transifex.com/projects/p/crown/</translation>
     </message>
     <message>
         <location line="-14"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Crown network.</source>
-        <translation>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Crown network.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Terracoin network.</source>
+        <translation>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Terracoin network.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2914,19 +2914,19 @@ https://www.transifex.com/projects/p/crown/</translation>
     </message>
     <message>
         <location line="+78"/>
-        <source>If the custom fee is set to 1000 crowns and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 crowns in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 crowns. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>If the custom fee is set to 1000 crowns and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 crowns in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 crowns. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
+        <source>If the custom fee is set to 1000 terracoins and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 terracoins in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 terracoins. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>If the custom fee is set to 1000 terracoins and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 terracoins in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 terracoins. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>If the custom fee is set to 1000 crowns and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 crowns in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 crowns. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>If the custom fee is set to 1000 crowns and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 crowns in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 crowns. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
+        <source>If the custom fee is set to 1000 terracoins and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 terracoins in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 terracoins. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>If the custom fee is set to 1000 terracoins and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 terracoins in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 terracoins. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
     </message>
     <message>
         <location line="+33"/>
         <location line="+13"/>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for crown transactions than the network can process.</source>
-        <translation>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for crown transactions than the network can process.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for terracoin transactions than the network can process.</source>
+        <translation>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for terracoin transactions than the network can process.</translation>
     </message>
     <message>
         <location line="-59"/>
@@ -3186,8 +3186,8 @@ https://www.transifex.com/projects/p/crown/</translation>
     </message>
     <message>
         <location line="+129"/>
-        <source>Warning: Invalid Crown address</source>
-        <translation>Warning: Invalid Crown address</translation>
+        <source>Warning: Invalid Terracoin address</source>
+        <translation>Warning: Invalid Terracoin address</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -3214,8 +3214,8 @@ https://www.transifex.com/projects/p/crown/</translation>
     </message>
     <message>
         <location line="+18"/>
-        <source>The Crown address to send the payment to</source>
-        <translation>The Crown address to send the payment to</translation>
+        <source>The Terracoin address to send the payment to</source>
+        <translation>The Terracoin address to send the payment to</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3268,8 +3268,8 @@ https://www.transifex.com/projects/p/crown/</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>A message that was attached to the crown: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Crown network.</source>
-        <translation>A message that was attached to the crown: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Crown network.</translation>
+        <source>A message that was attached to the terracoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Terracoin network.</source>
+        <translation>A message that was attached to the terracoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Terracoin network.</translation>
     </message>
     <message>
         <location line="+426"/>
@@ -3303,8 +3303,8 @@ https://www.transifex.com/projects/p/crown/</translation>
     <name>ShutdownWindow</name>
     <message>
         <location filename="../utilitydialog.cpp" line="+43"/>
-        <source>Crown Core is shutting down...</source>
-        <translation>Crown Core is shutting down...</translation>
+        <source>Terracoin Core is shutting down...</source>
+        <translation>Terracoin Core is shutting down...</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3331,8 +3331,8 @@ https://www.transifex.com/projects/p/crown/</translation>
     </message>
     <message>
         <location line="+18"/>
-        <source>The Crown address to sign the message with</source>
-        <translation>The Crown address to sign the message with</translation>
+        <source>The Terracoin address to sign the message with</source>
+        <translation>The Terracoin address to sign the message with</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3373,8 +3373,8 @@ https://www.transifex.com/projects/p/crown/</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Crown address</source>
-        <translation>Sign the message to prove you own this Crown address</translation>
+        <source>Sign the message to prove you own this Terracoin address</source>
+        <translation>Sign the message to prove you own this Terracoin address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3404,13 +3404,13 @@ https://www.transifex.com/projects/p/crown/</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>The Crown address the message was signed with</source>
-        <translation>The Crown address the message was signed with</translation>
+        <source>The Terracoin address the message was signed with</source>
+        <translation>The Terracoin address the message was signed with</translation>
     </message>
     <message>
         <location line="+37"/>
-        <source>Verify the message to ensure it was signed with the specified Crown address</source>
-        <translation>Verify the message to ensure it was signed with the specified Crown address</translation>
+        <source>Verify the message to ensure it was signed with the specified Terracoin address</source>
+        <translation>Verify the message to ensure it was signed with the specified Terracoin address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3498,8 +3498,8 @@ https://www.transifex.com/projects/p/crown/</translation>
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+36"/>
-        <source>Crown Core</source>
-        <translation>Crown Core</translation>
+        <source>Terracoin Core</source>
+        <translation>Terracoin Core</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3513,8 +3513,8 @@ https://www.transifex.com/projects/p/crown/</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>The Crown Core developers</source>
-        <translation>The Crown Core developers</translation>
+        <source>The Terracoin Core developers</source>
+        <translation>The Terracoin Core developers</translation>
     </message>
     <message>
         <location filename="../networkstyle.cpp" line="+19"/>
@@ -4242,16 +4242,16 @@ https://www.transifex.com/projects/p/crown/</translation>
     </message>
 </context>
 <context>
-    <name>crown-core</name>
+    <name>terracoin-core</name>
     <message>
-        <location filename="../crownstrings.cpp" line="+22"/>
+        <location filename="../terracoinstrings.cpp" line="+22"/>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
         <translation>Bind to given address and always listen on it. Use [host]:port notation for IPv6</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>Cannot obtain a lock on data directory %s. Crown Core is probably already running.</source>
-        <translation>Cannot obtain a lock on data directory %s. Crown Core is probably already running.</translation>
+        <source>Cannot obtain a lock on data directory %s. Terracoin Core is probably already running.</source>
+        <translation>Cannot obtain a lock on data directory %s. Terracoin Core is probably already running.</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -4315,8 +4315,8 @@ https://www.transifex.com/projects/p/crown/</translation>
     </message>
     <message>
         <location line="+20"/>
-        <source>Unable to bind to %s on this computer. Crown Core is probably already running.</source>
-        <translation>Unable to bind to %s on this computer. Crown Core is probably already running.</translation>
+        <source>Unable to bind to %s on this computer. Terracoin Core is probably already running.</source>
+        <translation>Unable to bind to %s on this computer. Terracoin Core is probably already running.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4605,8 +4605,8 @@ https://www.transifex.com/projects/p/crown/</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Disable all Crown specific functionality (Thrones, Darksend, InstantX, Budgeting) (0-1, default: %u)</source>
-        <translation>Disable all Crown specific functionality (Thrones, Darksend, InstantX, Budgeting) (0-1, default: %u)</translation>
+        <source>Disable all Terracoin specific functionality (Thrones, Darksend, InstantX, Budgeting) (0-1, default: %u)</source>
+        <translation>Disable all Terracoin specific functionality (Thrones, Darksend, InstantX, Budgeting) (0-1, default: %u)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4725,27 +4725,27 @@ https://www.transifex.com/projects/p/crown/</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>To use crownd, or the -server option to crown-qt, you must set an rpcpassword in the configuration file:
+        <source>To use terracoind, or the -server option to terracoin-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=crownrpc
+rpcuser=terracoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Crown Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Terracoin Alert&quot; admin@foo.com
 </source>
-        <translation>To use crownd, or the -server option to crown-qt, you must set an rpcpassword in the configuration file:
+        <translation>To use terracoind, or the -server option to terracoin-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=crownrpc
+rpcuser=terracoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Crown Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Terracoin Alert&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -4765,8 +4765,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Crown Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="+6"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Crown Core will not work properly.</source>
-        <translation>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Crown Core will not work properly.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Terracoin Core will not work properly.</source>
+        <translation>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Terracoin Core will not work properly.</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -4827,8 +4827,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Crown Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="+1"/>
-        <source>Copyright (C) 2014-%i The Crown Core Developers</source>
-        <translation>Copyright (C) 2014-%i The Crown Core Developers</translation>
+        <source>Copyright (C) 2014-%i The Terracoin Core Developers</source>
+        <translation>Copyright (C) 2014-%i The Terracoin Core Developers</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4867,8 +4867,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Crown Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="+6"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Crown Core</source>
-        <translation>Error loading wallet.dat: Wallet requires newer version of Crown Core</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Terracoin Core</source>
+        <translation>Error loading wallet.dat: Wallet requires newer version of Terracoin Core</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4957,8 +4957,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Crown Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="+1"/>
-        <source>Initialization sanity check failed. Crown Core is shutting down.</source>
-        <translation>Initialization sanity check failed. Crown Core is shutting down.</translation>
+        <source>Initialization sanity check failed. Terracoin Core is shutting down.</source>
+        <translation>Initialization sanity check failed. Terracoin Core is shutting down.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5267,8 +5267,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Crown Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="+9"/>
-        <source>Wallet needed to be rewritten: restart Crown Core to complete</source>
-        <translation>Wallet needed to be rewritten: restart Crown Core to complete</translation>
+        <source>Wallet needed to be rewritten: restart Terracoin Core to complete</source>
+        <translation>Wallet needed to be rewritten: restart Terracoin Core to complete</translation>
     </message>
     <message>
         <location line="+5"/>

@@ -12,7 +12,7 @@
 #define BITCOIN_UTIL_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/crown-config.h"
+#include "config/terracoin-config.h"
 #endif
 
 #include "compat.h"
@@ -28,14 +28,14 @@
 #include <boost/filesystem/path.hpp>
 #include <boost/thread/exceptions.hpp>
 
-//Crown only features
+//Terracoin only features
 
 extern bool fThroNe;
 extern bool fLiteMode;
 extern bool fEnableInstantX;
 extern int nInstantXDepth;
 extern int nDarksendRounds;
-extern int nAnonymizeCrownAmount;
+extern int nAnonymizeTerracoinAmount;
 extern int nLiquidityProvider;
 extern bool fEnableDarksend;
 extern int64_t enforceThronePaymentsTime;
@@ -194,7 +194,7 @@ void RenameThread(const char* name);
  */
 template <typename Callable> void LoopForever(const char* name,  Callable func, int64_t msecs)
 {
-    std::string s = strprintf("crown-%s", name);
+    std::string s = strprintf("terracoin-%s", name);
     RenameThread(s.c_str());
     LogPrintf("%s thread start\n", name);
     try
@@ -225,7 +225,7 @@ template <typename Callable> void LoopForever(const char* name,  Callable func, 
  */
 template <typename Callable> void TraceThread(const char* name,  Callable func)
 {
-    std::string s = strprintf("crown-%s", name);
+    std::string s = strprintf("terracoin-%s", name);
     RenameThread(s.c_str());
     try
     {

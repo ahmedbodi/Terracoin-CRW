@@ -3,7 +3,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/crown-config.h"
+#include "config/terracoin-config.h"
 #endif
 
 #include "optionsdialog.h"
@@ -209,7 +209,7 @@ void OptionsDialog::setMapper()
 
     /* Darksend Rounds */
     //mapper->addMapping(ui->darksendRounds, OptionsModel::DarksendRounds);
-    //mapper->addMapping(ui->anonymizeCrown, OptionsModel::AnonymizeCrownAmount);
+    //mapper->addMapping(ui->anonymizeTerracoin, OptionsModel::AnonymizeTerracoinAmount);
 
 }
 

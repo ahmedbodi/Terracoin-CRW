@@ -93,7 +93,7 @@ public:
 };
 
 /**
- * Crown RPC command dispatcher.
+ * Terracoin RPC command dispatcher.
  */
 class CRPCTable
 {

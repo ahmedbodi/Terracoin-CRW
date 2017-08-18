@@ -23,8 +23,8 @@
  *
  * \section intro_sec Introduction
  *
- * This is the developer documentation of the reference client for an experimental new digital currency called Crown (http://www.crown.tech/),
- * which enables instant payments to anyone, anywhere in the world. Crown uses peer-to-peer technology to operate
+ * This is the developer documentation of the reference client for an experimental new digital currency called Terracoin (http://www.terracoin.tech/),
+ * which enables instant payments to anyone, anywhere in the world. Terracoin uses peer-to-peer technology to operate
  * with no central authority: managing transactions and issuing money are carried out collectively by the network.
  *
  * The software is a community-driven open source project, released under the MIT license.
@@ -65,13 +65,13 @@ bool AppInit(int argc, char* argv[])
     //
     // Parameters
     //
-    // If Qt is used, parameters/crown.conf are parsed in qt/crown.cpp's main()
+    // If Qt is used, parameters/terracoin.conf are parsed in qt/terracoin.cpp's main()
     ParseParameters(argc, argv);
 
     // Process help and version before taking care about datadir
     if (mapArgs.count("-?") || mapArgs.count("-help") || mapArgs.count("-version"))
     {
-        std::string strUsage = _("Crown Core Daemon") + " " + _("version") + " " + FormatFullVersion() + "\n";
+        std::string strUsage = _("Terracoin Core Daemon") + " " + _("version") + " " + FormatFullVersion() + "\n";
 
         if (mapArgs.count("-version"))
         {
@@ -80,7 +80,7 @@ bool AppInit(int argc, char* argv[])
         else
         {
             strUsage += "\n" + _("Usage:") + "\n" +
-                  "  crownd [options]                     " + _("Start Crown Core Daemon") + "\n";
+                  "  terracoind [options]                     " + _("Start Terracoin Core Daemon") + "\n";
 
             strUsage += "\n" + HelpMessage(HMM_BITCOIND);
         }
@@ -119,19 +119,19 @@ bool AppInit(int argc, char* argv[])
         // Command-line RPC
         bool fCommandLine = false;
         for (int i = 1; i < argc; i++)
-            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "crown:"))
+            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "terracoin:"))
                 fCommandLine = true;
 
         if (fCommandLine)
         {
-            fprintf(stderr, "Error: There is no RPC client functionality in crownd anymore. Use the crown-cli utility instead.\n");
+            fprintf(stderr, "Error: There is no RPC client functionality in terracoind anymore. Use the terracoin-cli utility instead.\n");
             exit(1);
         }
 #ifndef WIN32
         fDaemon = GetBoolArg("-daemon", false);
         if (fDaemon)
         {
-            fprintf(stdout, "Crown server starting\n");
+            fprintf(stdout, "Terracoin server starting\n");
 
             // Daemonize
             pid_t pid = fork();
@@ -188,7 +188,7 @@ int main(int argc, char* argv[])
 {
     SetupEnvironment();
 
-    // Connect crownd signal handlers
+    // Connect terracoind signal handlers
     noui_connect();
 
     return (AppInit(argc, argv) ? 0 : 1);
