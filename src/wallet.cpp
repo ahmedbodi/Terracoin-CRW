@@ -1464,13 +1464,13 @@ void CWallet::AvailableCoins(vector<COutput>& vCoins, bool fOnlyConfirmed, const
                 if(coin_type == ONLY_DENOMINATED) {
                     found = IsDenominatedAmount(pcoin->vout[i].nValue);
                 } else if(coin_type == ONLY_NOT10000IFMN) {
-                    found = !(fThroNe && pcoin->vout[i].nValue == 10000*COIN);
+                    found = !(fThroNe && pcoin->vout[i].nValue == 5000*COIN);
                 } else if(coin_type == ONLY_NONDENOMINATED_NOT10000IFMN) {
                     if (IsCollateralAmount(pcoin->vout[i].nValue)) continue; // do not use collateral amounts
                     found = !IsDenominatedAmount(pcoin->vout[i].nValue);
-                    if(found && fThroNe) found = pcoin->vout[i].nValue != 10000*COIN; // do not use Hot MN funds
+                    if(found && fThroNe) found = pcoin->vout[i].nValue != 5000*COIN; // do not use Hot MN funds
                 } else if(coin_type == ONLY_10000) {
-                    found = pcoin->vout[i].nValue == 10000*COIN;
+                    found = pcoin->vout[i].nValue == 5000*COIN;
                 } else {
                     found = true;
                 }
@@ -1702,7 +1702,7 @@ bool CWallet::SelectCoins(const CAmount& nTargetValue, set<pair<const CWalletTx*
         return (nValueRet >= nTargetValue);
     }
 
-    //if we're doing only denominated, we need to round up to the nearest .1 CRW
+    //if we're doing only denominated, we need to round up to the nearest .1 TRC
     if(coin_type == ONLY_DENOMINATED) {
         // Make outputs by looping through denominations, from large to small
         BOOST_FOREACH(int64_t v, darkSendDenominations)
@@ -1710,7 +1710,7 @@ bool CWallet::SelectCoins(const CAmount& nTargetValue, set<pair<const CWalletTx*
             BOOST_FOREACH(const COutput& out, vCoins)
             {
                 if(out.tx->vout[out.i].nValue == v                                            //make sure it's the denom we're looking for
-                    && nValueRet + out.tx->vout[out.i].nValue < nTargetValue + (0.1*COIN)+100 //round the amount up to .1 CRW over
+                    && nValueRet + out.tx->vout[out.i].nValue < nTargetValue + (0.1*COIN)+100 //round the amount up to .1 TRC over
                 ){
                     CTxIn vin = CTxIn(out.tx->GetHash(),out.i);
                     int rounds = GetInputDarksendRounds(vin);
@@ -1766,16 +1766,16 @@ bool CWallet::SelectCoinsByDenominations(int nDenom, int64_t nValueMin, int64_t 
     BOOST_FOREACH(const COutput& out, vCoins)
     {
         // throne-like input should not be selected by AvailableCoins now anyway
-        //if(out.tx->vout[out.i].nValue == 10000*COIN) continue;
+        //if(out.tx->vout[out.i].nValue == 5000*COIN) continue;
         if(nValueRet + out.tx->vout[out.i].nValue <= nValueMax){
             bool fAccepted = false;
 
             // Function returns as follows:
             //
-            // bit 0 - 100 CRW+1 ( bit on if present )
-            // bit 1 - 10 CRW+1
-            // bit 2 - 1 CRW+1
-            // bit 3 - .1 CRW+1
+            // bit 0 - 100 TRC+1 ( bit on if present )
+            // bit 1 - 10 TRC+1
+            // bit 2 - 1 TRC+1
+            // bit 3 - .1 TRC+1
 
             CTxIn vin = CTxIn(out.tx->GetHash(),out.i);
 
@@ -1839,7 +1839,7 @@ bool CWallet::SelectCoinsDark(CAmount nValueMin, CAmount nValueMax, std::vector<
         if(out.tx->vout[out.i].nValue < CENT) continue;
         //do not allow collaterals to be selected
         if(IsCollateralAmount(out.tx->vout[out.i].nValue)) continue;
-        if(fThroNe && out.tx->vout[out.i].nValue == 10000*COIN) continue; //throne input
+        if(fThroNe && out.tx->vout[out.i].nValue == 5000*COIN) continue; //throne input
 
         if(nValueRet + out.tx->vout[out.i].nValue <= nValueMax){
             CTxIn vin = CTxIn(out.tx->GetHash(),out.i);
@@ -2154,9 +2154,9 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, CAmount> >& vecSend,
                     if(coin_type == ALL_COINS) {
                         strFailReason = _("Insufficient funds.");
                     } else if (coin_type == ONLY_NOT10000IFMN) {
-                        strFailReason = _("Unable to locate enough funds for this transaction that are not equal 10000 CRW.");
+                        strFailReason = _("Unable to locate enough funds for this transaction that are not equal 5000 TRC.");
                     } else if (coin_type == ONLY_NONDENOMINATED_NOT10000IFMN) {
-                        strFailReason = _("Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 10000 CRW.");
+                        strFailReason = _("Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 5000 TRC.");
                     } else {
                         strFailReason = _("Unable to locate enough Darksend denominated funds for this transaction.");
                         strFailReason += " " + _("Darksend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.");
